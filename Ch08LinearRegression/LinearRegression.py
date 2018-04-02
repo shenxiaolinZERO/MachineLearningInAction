@@ -10,10 +10,32 @@ __author__ = 'Administrator'
 #（5）测试算法
 #（6）使用算法
 
-#标准回归函数和数据导入函数
+#标准回归函数和
 from numpy import *
+# 数据导入函数
 def loadDataset(fileName):
-    numFeat=len()
+    numFeat=len(open(fileName).readline().split("\t"))-1
+    dataMat=[];labelMat=[]
+    fr=open(fileName)
+    for line in fr.readlines():
+        lineArr=[]
+        curLine=line.strip().split("\t")
+        for i in range(numFeat):
+            lineArr.append(float(curLine[i]))
+        dataMat.append(lineArr)
+        labelMat.append(float(curLine[-1]))
+    return dataMat,labelMat
+
+def standRegres(xArr,yArr):
+    xMat=mat(xArr);yMat=mat(yArr).T
+    xTx=xMat.T*xMat
+    if linalg.det(xTx)==0.0:
+        print("This matrix is singular, can not do inverse.")
+        return
+    ws=xTx.I *(xMat.T*yMat)
+    return ws
+
+
 
 
 
