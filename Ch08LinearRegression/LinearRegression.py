@@ -10,6 +10,10 @@ __author__ = 'Administrator'
 #（5）测试算法
 #（6）使用算法
 
+#标准回归函数和数据导入函数
+from numpy import *
+def loadDataset(fileName):
+    numFeat=len()
 
 
 
