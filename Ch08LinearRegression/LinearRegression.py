@@ -13,6 +13,7 @@ __author__ = 'Administrator'
 #标准回归函数和
 from numpy import *
 # 数据导入函数
+#该函数用来打开一个用tab键分隔的文本文件，默认文件每行的最后一个值是目标值。
 def loadDataset(fileName):
     numFeat=len(open(fileName).readline().split("\t"))-1
     dataMat=[];labelMat=[]
@@ -26,10 +27,12 @@ def loadDataset(fileName):
         labelMat.append(float(curLine[-1]))
     return dataMat,labelMat
 
+#standRegres(xArr,yArr)用来计算最佳拟合直线
 def standRegres(xArr,yArr):
+    #先读入x和y并将它们保存到矩阵中
     xMat=mat(xArr);yMat=mat(yArr).T
     xTx=xMat.T*xMat
-    if linalg.det(xTx)==0.0:
+    if linalg.det(xTx)==0.0: #判断xTx的行列式是否为零，如果为零，那么计算逆矩阵的时候将出现错误。所以这一步是必要的！
         print("This matrix is singular, can not do inverse.")
         return
     ws=xTx.I *(xMat.T*yMat)
