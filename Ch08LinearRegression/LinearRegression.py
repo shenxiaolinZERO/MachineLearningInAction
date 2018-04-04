@@ -32,10 +32,13 @@ def standRegres(xArr,yArr):
     #先读入x和y并将它们保存到矩阵中
     xMat=mat(xArr);yMat=mat(yArr).T
     xTx=xMat.T*xMat
+    #Numpy 提供一个线性代数的库linalg，其中包括很多有用的函数。
+    #可以直接调用linalg.det()来计算行列式
     if linalg.det(xTx)==0.0: #判断xTx的行列式是否为零，如果为零，那么计算逆矩阵的时候将出现错误。所以这一步是必要的！
         print("This matrix is singular, can not do inverse.")
         return
     ws=xTx.I *(xMat.T*yMat)
+    #上面一行代码，
     return ws
 
 
