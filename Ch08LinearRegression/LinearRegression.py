@@ -38,7 +38,8 @@ def standRegres(xArr,yArr):
         print("This matrix is singular, can not do inverse.")
         return
     ws=xTx.I *(xMat.T*yMat)
-    #上面一行代码，
+    #Numpy的线性代数库linalg还提供一个函数来解未知矩阵，如果使用该函数上面一行代码，可替代为：
+    #ws=linalg.solve(xTx,xMat.T*yMatT)
     return ws
 
 
