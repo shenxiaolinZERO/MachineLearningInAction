@@ -19,7 +19,7 @@ data=np.loadtxt(filepath,dtype=float,delimiter=',',converters={4:iris_type})
 #delimiter=',' 数据以什么分割符号分割数据
 #converters={4:iris_type} 对某一列数据（第四列）进行某种类型的转换
 
-print(data)
+# print(data)
 
 #将原始数据集划分成训练集和测试集
 X ,y=np.split(data,(4,),axis=1) #np.split 按照列（axis=1）进行分割，从第四列开始往后的作为y 数据，之前的作为X 数据
@@ -41,5 +41,12 @@ print(classifier.score(x_train,x_test))
 
 #由于准确率表现不直观，可以通过其他方式观察结果。
 
+#首先将原始结果与训练集预测结果进行对比：
+# y_train_hat=classifier.predict(x_train)
+# y_train_1d=y_train.reshape((-1))
+# comp=zip(y_train_1d,y_train_hat) #用zip把原始结果和预测结果放在一起。显示如下：
+# print(list(comp))
+
+#
 
 
