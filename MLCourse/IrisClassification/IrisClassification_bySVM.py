@@ -19,7 +19,7 @@ data=np.loadtxt(filepath,dtype=float,delimiter=',',converters={4:iris_type})
 #delimiter=',' 数据以什么分割符号分割数据
 #converters={4:iris_type} 对某一列数据（第四列）进行某种类型的转换
 
-# print(data)
+print(data)
 
 #将原始数据集划分成训练集和测试集
 X ,y=np.split(data,(4,),axis=1) #np.split 按照列（axis=1）进行分割，从第四列开始往后的作为y 数据，之前的作为X 数据
@@ -29,7 +29,17 @@ x_train,x_test,y_train,y_test=model_selection.train_test_split(x,y,random_state=
 # 随机数的产生取决于种子，随机数和种子之间的关系遵从以下两个规则：种子不同，产生不同的随机数；种子相同，即使实例不同也产生相同的随机数。）
 
 #搭建模型
+classifier=svm.SVC(kernel='rbf',gamma=0.1,decision_function_shape='ovo',C=0.8)
+#kernel='rbf' 核函数
+#decision_function_shape='ovo'： one vs one 分类问题
 
+#开始训练
+classifier.fit(x_train,x_test)
+
+#输出训练集的准确率
+print(classifier.score(x_train,x_test))
+
+#由于准确率表现不直观，可以通过其他方式观察结果。
 
 
 
