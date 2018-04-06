@@ -47,6 +47,8 @@ print(classifier.score(x_train,x_test))
 # comp=zip(y_train_1d,y_train_hat) #用zip把原始结果和预测结果放在一起。显示如下：
 # print(list(comp))
 
-#
+#同样的,可以用训练好的模型对测试集的数据进行预测:
+print(classifier.score(x_test,y_test))
+y_test_hat=classifier
 
 
