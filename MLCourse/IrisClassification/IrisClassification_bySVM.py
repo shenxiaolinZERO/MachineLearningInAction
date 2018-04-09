@@ -55,6 +55,7 @@ comp=zip(y_test_1d,y_test_hat)
 print(list(comp))
 
 #还可以通过图像进行可视化：
-
+plt.figure()
+plt.subplot(121)
 
 
