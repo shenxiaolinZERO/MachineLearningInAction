@@ -57,5 +57,6 @@ print(list(comp))
 #还可以通过图像进行可视化：
 plt.figure()
 plt.subplot(121)
+plt.scatter(x_train[:,0],x_train[:,1],c=y_train.reshape((-1)),edgecolors='k')
 
 
