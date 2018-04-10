@@ -42,10 +42,10 @@ print(classifier.score(x_train,x_test))
 #由于准确率表现不直观，可以通过其他方式观察结果。
 
 #首先将原始结果与训练集预测结果进行对比：
-# y_train_hat=classifier.predict(x_train)
-# y_train_1d=y_train.reshape((-1))
-# comp=zip(y_train_1d,y_train_hat) #用zip把原始结果和预测结果放在一起。显示如下：
-# print(list(comp))
+y_train_hat=classifier.predict(x_train)
+y_train_1d=y_train.reshape((-1))
+comp=zip(y_train_1d,y_train_hat) #用zip把原始结果和预测结果放在一起。显示如下：
+print(list(comp))
 
 #同样的,可以用训练好的模型对测试集的数据进行预测:
 print(classifier.score(x_test,y_test))
@@ -59,6 +59,6 @@ plt.figure()
 plt.subplot(121)
 plt.scatter(x_train[:,0],x_train[:,1],c=y_train.reshape((-1)),edgecolors='k',s=50)
 plt.subplot(122)
-plt.scatter(x_train[:,0],x_train[:,1],c=y_train_hat.reshape((-1)),edgecolors='k',)
+plt.scatter(x_train[:,0],x_train[:,1],c=y_train_hat.reshape((-1)),edgecolors='k',s=50)
 
 
