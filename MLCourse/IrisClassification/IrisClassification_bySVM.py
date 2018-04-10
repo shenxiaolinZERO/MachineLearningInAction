@@ -59,5 +59,6 @@ plt.figure()
 plt.subplot(121)
 plt.scatter(x_train[:,0],x_train[:,1],c=y_train.reshape((-1)),edgecolors='k',s=50)
 plt.subplot(122)
+plt.scatter(x_train[:,0],x_train[:,1],c=y_train_hat.reshape((-1)),edgecolors='k',)
 
 
