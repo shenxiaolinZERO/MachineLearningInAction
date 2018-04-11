@@ -56,7 +56,9 @@ x_train,x_test,y_train,y_test=model_selection.train_test_split(x,y,random_state=
 # kernel='linear'时，为线性核函数，C越大分类效果越好，但有可能会过拟合（defaul C=1）。
 classifier=svm.SVC(kernel='rbf',gamma=0.1,decision_function_shape='ovo',C=0.8)
 # kernel='rbf'（default）时，为高斯核函数，gamma值越小，分类界面越连续；gamma值越大，分类界面越“散”，分类效果越好，但有可能会过拟合。
-#decision_function_shape='ovo'： one vs one 分类问题
+# decision_function_shape='ovo'时，为one v one分类问题，即将类别两两之间进行划分，用二分类的方法模拟多分类的结果。
+# decision_function_shape='ovr'时，为one v rest分类问题，即一个类别与其他类别进行划分，
+
 
 #开始训练
 classifier.fit(x_train,x_test)
