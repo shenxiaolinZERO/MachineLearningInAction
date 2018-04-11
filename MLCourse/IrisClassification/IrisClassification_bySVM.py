@@ -64,10 +64,21 @@ classifier.fit(x_train,y_train.ravel())
 
 
 
+def show_accuracy(y_hat,y_train,str):
+    return 0
+
 #（4）计算svc分类器的准确率
+print("输出训练集的准确率为：",classifier.score(x_train,y_train))
+# y_hat=classifier.predict(x_train)
+# show_accuracy(y_hat,y_train,'训练集')
+print("输出测试集的准确率为：",classifier.score(x_test,y_test))
+# y_hat=classifier.predict(x_test)
+# show_accuracy(y_hat,y_test,'测试集')
 
 
-# '''
+
+
+'''
 #输出训练集的准确率
 print(classifier.score(x_train,x_test))
 
@@ -86,6 +97,7 @@ y_test_1d=y_test.reshape((-1))
 comp=zip(y_test_1d,y_test_hat)
 print(list(comp))
 
+
 #还可以通过图像进行可视化：
 plt.figure()
 plt.subplot(121)
@@ -93,5 +105,5 @@ plt.scatter(x_train[:,0],x_train[:,1],c=y_train.reshape((-1)),edgecolors='k',s=5
 plt.subplot(122)
 plt.scatter(x_train[:,0],x_train[:,1],c=y_train_hat.reshape((-1)),edgecolors='k',s=50)
 
+'''
 
-# '''
