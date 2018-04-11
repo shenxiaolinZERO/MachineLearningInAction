@@ -25,8 +25,9 @@ data=np.loadtxt(filepath,dtype=float,delimiter=',',converters={4:iris_type})
 #converters={4:iris_type} ：对某一列数据（第四列）进行某种类型的转换，将数据列与转换函数进行映射的字典。eg：{1:fun}，含义是将第2列对应转换函数进行转换。
 #                          converters={4: iris_type}中“4”指的是第5列。
 
-# print(data)
+print(data)
 
+'''
 #将原始数据集划分成训练集和测试集
 X ,y=np.split(data,(4,),axis=1) #np.split 按照列（axis=1）进行分割，从第四列开始往后的作为y 数据，之前的作为X 数据
 x=X[:,0:2] #在 X中取前两列作为特征（为了后期的可视化画图更加直观，故只取前两列特征值向量进行训练）
@@ -68,3 +69,4 @@ plt.subplot(122)
 plt.scatter(x_train[:,0],x_train[:,1],c=y_train_hat.reshape((-1)),edgecolors='k',s=50)
 
 
+'''
