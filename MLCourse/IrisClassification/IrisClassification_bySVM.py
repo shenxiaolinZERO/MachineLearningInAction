@@ -16,13 +16,14 @@ def iris_type(s):
     return class_label[s]
 
 #导入数据
-filepath='IRIS_dataset.txt'
+filepath='IRIS_dataset.txt'  # 数据文件路径
 data=np.loadtxt(filepath,dtype=float,delimiter=',',converters={4:iris_type})
 #以上4个参数中分别表示：
 #filepath ：文件路径。eg：C:/Dataset/iris.txt。
 #dtype=float ：数据类型。eg：float、str等。
 #delimiter=',' ：数据以什么分割符号分割。eg：‘，’。
 #converters={4:iris_type} ：对某一列数据（第四列）进行某种类型的转换，将数据列与转换函数进行映射的字典。eg：{1:fun}，含义是将第2列对应转换函数进行转换。
+#                          converters={4: iris_type}中“4”指的是第5列。
 
 # print(data)
 

@@ -37,8 +37,8 @@
       <file leaf-file-name="IrisClassification_bySVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_bySVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="24" column="94" lean-forward="false" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+            <state relative-caret-position="273">
+              <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
               <folding>
                 <element signature="e#70#93#0" expanded="true" />
               </folding>
@@ -313,8 +313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_bySVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="24" column="94" lean-forward="false" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+        <state relative-caret-position="273">
+          <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
           <folding>
             <element signature="e#70#93#0" expanded="true" />
           </folding>
