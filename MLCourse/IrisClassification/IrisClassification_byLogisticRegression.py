@@ -1,12 +1,18 @@
 # !/usr/bin/env python
 # encoding: utf-8
 __author__ = 'Administrator'
-from sklearn import svm
+from sklearn.linear_model import LogisticRegression
 import numpy as np
+import pandas as pd
+from sklearn import preprocessing
 from sklearn import model_selection
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib import colors
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+
+
 
 
 
