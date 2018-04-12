@@ -64,16 +64,19 @@ classifier=Pipeline([('sc',StandardScaler()),('clf',LogisticRegression())])
 classifier.fit(x_train,y_train.ravel())
 
 
-def show_accuracy(y_hat,y_train,str):
+def show_accuracy(y_hat,y_test,parameter):
     pass
 
 #（4）计算LogisticRegression分类器的准确率
-print("输出训练集的准确率为：",classifier.score(x_train,y_train))
+print("LogisticRegression-输出训练集的准确率为：",classifier.score(x_train,y_train))
 y_hat=classifier.predict(x_train)
 show_accuracy(y_hat,y_train,'训练集')
-print("输出测试集的准确率为：",classifier.score(x_test,y_test))
+print("LogisticRegression-输出测试集的准确率为：",classifier.score(x_test,y_test))
 y_hat=classifier.predict(x_test)
 show_accuracy(y_hat,y_test,'测试集')
+# LogisticRegression-输出训练集的准确率为： 0.809523809524
+# LogisticRegression-输出测试集的准确率为： 0.688888888889
+
 
 # 查看决策函数，可以通过decision_function()实现。decision_function中每一列的值代表距离各类别的距离。
 print('decision_function:\n', classifier.decision_function(x_train))
