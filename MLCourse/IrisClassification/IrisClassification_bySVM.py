@@ -79,7 +79,7 @@ print("输出测试集的准确率为：",classifier.score(x_test,y_test))
 y_hat=classifier.predict(x_test)
 show_accuracy(y_hat,y_test,'测试集')
 
-
+# 查看决策函数，可以通过decision_function()实现。decision_function中每一列的值代表距离各类别的距离。
 print('decision_function:\n', classifier.decision_function(x_train))
 print('\npredict:\n', classifier.predict(x_train))
 
