@@ -44,8 +44,6 @@ data=np.loadtxt(filepath,dtype=float,delimiter=',',converters={4:iris_type})
 #  [ 5.   3.6  1.4  0.2  0. ]]
 
 
-
-
 #（2）将原始数据集划分成训练集和测试集
 X ,y=np.split(data,(4,),axis=1) #np.split 按照列（axis=1）进行分割，从第四列开始往后的作为y 数据，之前的作为X 数据。函数 split(数据，分割位置，轴=1（水平分割） or 0（垂直分割）)。
 x=X[:,0:2] #在 X中取前两列作为特征（为了后期的可视化画图更加直观，故只取前两列特征值向量进行训练）
@@ -60,22 +58,16 @@ x_train,x_test,y_train,y_test=model_selection.train_test_split(x,y,random_state=
 # 随机数的产生取决于种子，随机数和种子之间的关系遵从以下两个规则：种子不同，产生不同的随机数；种子相同，即使实例不同也产生相同的随机数。）
 
 
-#（3）搭建模型，训练SVM分类器
-# classifier=svm.SVC(kernel='linear',gamma=0.1,decision_function_shape='ovo',C=0.1)
-# kernel='linear'时，为线性核函数，C越大分类效果越好，但有可能会过拟合（defaul C=1）。
-classifier=svm.SVC(kernel='rbf',gamma=0.1,decision_function_shape='ovo',C=0.8)
-# kernel='rbf'（default）时，为高斯核函数，gamma值越小，分类界面越连续；gamma值越大，分类界面越“散”，分类效果越好，但有可能会过拟合。
-# decision_function_shape='ovo'时，为one v one分类问题，即将类别两两之间进行划分，用二分类的方法模拟多分类的结果。
-# decision_function_shape='ovr'时，为one v rest分类问题，即一个类别与其他类别进行划分。
+#（3）搭建模型，训练LogisticRegression分类器
+classifier=Pipeline([('sc',StandardScaler()),('clf',LogisticRegression())])
 #开始训练
 classifier.fit(x_train,y_train.ravel())
-
 
 
 def show_accuracy(y_hat,y_train,str):
     pass
 
-#（4）计算svc分类器的准确率
+#（4）计算LogisticRegression分类器的准确率
 print("输出训练集的准确率为：",classifier.score(x_train,y_train))
 y_hat=classifier.predict(x_train)
 show_accuracy(y_hat,y_train,'训练集')
