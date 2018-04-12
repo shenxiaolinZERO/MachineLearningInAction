@@ -13,10 +13,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 
 
-
-
-
-
 # 当使用numpy中的loadtxt函数导入该数据集时，假设数据类型dtype为浮点型，但是很明显数据集的第五列的数据类型是字符串并不是浮点型。
 # 因此需要额外做一个工作，即通过loadtxt()函数中的converters参数将第五列通过转换函数映射成浮点类型的数据。
 # 首先，我们要写出一个转换函数：
@@ -111,39 +107,7 @@ plt.xlabel(u'花萼长度', fontsize=13)
 plt.ylabel(u'花萼宽度', fontsize=13)
 plt.xlim(x1_min, x1_max)
 plt.ylim(x2_min, x2_max)
-plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
-# plt.grid()
+plt.title(u'鸢尾花LogisticRegression分类结果', fontsize=15)
+plt.grid() #显示网格
 plt.show()
-
-
-
-
-'''
-#输出训练集的准确率
-print(classifier.score(x_train,x_test))
-
-#由于准确率表现不直观，可以通过其他方式观察结果。
-
-#首先将原始结果与训练集预测结果进行对比：
-y_train_hat=classifier.predict(x_train)
-y_train_1d=y_train.reshape((-1))
-comp=zip(y_train_1d,y_train_hat) #用zip把原始结果和预测结果放在一起。显示如下：
-print(list(comp))
-
-#同样的,可以用训练好的模型对测试集的数据进行预测:
-print(classifier.score(x_test,y_test))
-y_test_hat=classifier.predict(x_test)
-y_test_1d=y_test.reshape((-1))
-comp=zip(y_test_1d,y_test_hat)
-print(list(comp))
-
-
-#还可以通过图像进行可视化：
-plt.figure()
-plt.subplot(121)
-plt.scatter(x_train[:,0],x_train[:,1],c=y_train.reshape((-1)),edgecolors='k',s=50)
-plt.subplot(122)
-plt.scatter(x_train[:,0],x_train[:,1],c=y_train_hat.reshape((-1)),edgecolors='k',s=50)
-
-'''
 
