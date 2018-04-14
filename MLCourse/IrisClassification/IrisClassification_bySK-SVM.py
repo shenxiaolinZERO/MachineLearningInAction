@@ -39,9 +39,6 @@ data=np.loadtxt(filepath,dtype=float,delimiter=',',converters={4:iris_type})
 
 
 
-
-
-
 #（2）将原始数据集划分成训练集和测试集
 X ,y=np.split(data,(4,),axis=1) #np.split 按照列（axis=1）进行分割，从第四列开始往后的作为y 数据，之前的作为X 数据。函数 split(数据，分割位置，轴=1（水平分割） or 0（垂直分割）)。
 x=X[:,0:2] #在 X中取前两列作为特征（为了后期的可视化画图更加直观，故只取前两列特征值向量进行训练）
@@ -101,6 +98,7 @@ grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
 # 2.指定默认字体
 mpl.rcParams['font.sans-serif'] = [u'SimHei']
 mpl.rcParams['axes.unicode_minus'] = False
+
 # 3.绘制
 cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
 cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
