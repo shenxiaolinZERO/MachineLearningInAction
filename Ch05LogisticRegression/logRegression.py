@@ -35,6 +35,20 @@ def gradAscent(dataMatIn, classLabels):
         weights=weights+alpha * dataMatrix.transpose() * error
     return weights
 
+#随机梯度上升算法函数
+def stochasticGradAscent0(dataMatIn,classLabels):
+    dataMatrix = mat(dataMatIn)
+    labelMat = mat(classLabels).transpose()
+    m,n =shape(dataMatrix)
+    alpha=0.01
+    weights=ones(n)
+    for i in range(m):
+        h=sigmoid(sum(dataMatrix[i]*weights))
+        error=labelMat[i]-h
+        weights =weights + alpha * error * dataMatrix[i]
+    return weights
+
+
 #画出数据集合 Logistic回归最佳拟合曲线
 def plotBestFit(wei):
     weights=wei.getA()
@@ -62,10 +76,12 @@ def plotBestFit(wei):
 
 if __name__ == '__main__':
     dataArr,labelMat=loadDataSet()
-    weights=gradAscent(dataArr,labelMat)
-    print(weights)
+    weights1=gradAscent(dataArr,labelMat)
+    print(weights1)
     # [[4.12414349]
     #  [0.48007329]
     #  [-0.6168482]]
-    plotBestFit(weights)
+    weights2=stochasticGradAscent0(dataArr,labelMat)
+    print(weights2)
+    plotBestFit(weights2)
 
