@@ -11,7 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySVM.coverage" NAME="IrisClassification_bySVM Coverage Results" MODIFIED="1523500166694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$logRegression.coverage" NAME="logRegression Coverage Results" MODIFIED="1523690790492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch05LogisticRegression" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$logRegression.coverage" NAME="logRegression Coverage Results" MODIFIED="1523691563913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch05LogisticRegression" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression.coverage" NAME="IrisClassification_byLogisticRegression Coverage Results" MODIFIED="1523501765756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byGaussianNaiveBayes.coverage" NAME="IrisClassification_byGaussianNaiveBayes Coverage Results" MODIFIED="1523502750123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
   </component>
@@ -54,8 +54,8 @@
       <file leaf-file-name="logRegression.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch05LogisticRegression/logRegression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+            <state relative-caret-position="278">
+              <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
               <folding>
                 <element signature="e#86#104#0" expanded="true" />
               </folding>
@@ -521,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch05LogisticRegression/logRegression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        <state relative-caret-position="278">
+          <caret line="69" column="23" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
           </folding>
