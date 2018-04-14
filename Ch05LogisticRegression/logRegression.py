@@ -28,11 +28,19 @@ def gradAscent(dataMatIn, classLabels):
     m,n =shape(dataMatrix)
     alpha=0.001  #目标移动步长
     maxCycles= 500  #迭代次数
-    weights=ones((n,1))
+    weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵
     for k in range(maxCycles):
         h=sigmoid(dataMatrix * weights ) #h是一个列向量，不是一个数
         error=(labelMat-h)
         weights=weights+alpha * dataMatrix.transpose() * error
     return weights
+
+if __name__ == '__main__':
+    dataArr,labelMat=loadDataSet()
+    weights=gradAscent(dataArr,labelMat)
+    print(weights)
+    # [[4.12414349]
+    #  [0.48007329]
+    #  [-0.6168482]]
 
 
