@@ -58,5 +58,24 @@ def data_visualization():
     # savefig('Iris.png',dpi=700,bbox_inches='tight')
     plt.show()
 
+def LogRegressionAlgorithm():
+    attributes=['SepalLength','SepalWidth','PetalLength','PetalWidth'] #鸢尾花的四个属性名
+
+    datas=[]
+    labels=[]
+
+    with open('IRIS_dataset.txt','r') as f:
+        for line in f:
+            linedata=line.split(' ')
+            datas.append(linedata[:-1]) #前4列是4个属性的值
+            labels.append(linedata[-1].replace('\n','')) #最后一列是类别
+    datas=np.array(datas)
+    datas=datas.astype(float) #将二维的字符串数组转换成浮点数数组
+    labels=np.array(labels)
+    kinds=list(set(labels)) #3个类别的名字列表
+    print(datas)
+
+
 if __name__ == '__main__':
     # data_visualization()
+    LogRegressionAlgorithm()
