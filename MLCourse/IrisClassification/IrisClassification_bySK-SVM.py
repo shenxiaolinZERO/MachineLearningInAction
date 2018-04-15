@@ -92,8 +92,13 @@ x1, x2 = np.mgrid[x1_min:x1_max:200j, x2_min:x2_max:200j]  # 生成网格采样�
 grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点，再通过stack()函数，axis=1，生成测试点
 # .flat 将矩阵转变成一维数组 （与ravel()的区别：flatten：返回的是拷贝
 
-# print 'grid_test = \n', grid_test
+print("grid_test = \n", grid_test)
+# print("x = \n",x)
 grid_hat = classifier.predict(grid_test)       # 预测分类值
+
+
+print("grid_hat = \n", grid_hat)
+# print(x1.shape())
 grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
 
 
