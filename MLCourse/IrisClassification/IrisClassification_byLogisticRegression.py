@@ -92,7 +92,7 @@ def LogRegressionAlgorithm():
     data=np.ones((N,M))
     data[:,1:]=(datas-means)/stds #对原始数据进行标准差归一化
 
-    W=np.zeros((K-1),M)  #存储参数矩阵
+    W=np.zeros((K-1,M))  #存储参数矩阵
     priorEs=np.array([1.0/N*np.sum(data[labels==kinds[i]],axis=0) for i in range(K-1)]) #各个属性的先验期望值
     liklist=[]
     for it in range(1000):
@@ -121,11 +121,32 @@ def LogRegressionAlgorithm():
     rights[labels == kinds[2]]=2
     rights =rights.astype(int)
 
+
+
     #误判的个数
     print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
+    return rights, predict, kinds
+
+#输出混淆矩阵
+def confusion_matrix(rights,predict,kinds):
+    K=np.shape(list(set(rights).union(set(predict))))[0]
+    matrix=np.zeros((K,K))
+    for righ,predi in zip(rights,predict):
+        matrix[righ,predi] +=1
+    print("%-12s"%"类别"),
+    for i in range(K):
+        print("%-12s"%kinds[i]),
+    print('\n'),
+    for i in range(K):
+        print("%-12s" % kinds[i]),
+        for j in range(K):
+            print("%-12d"%matrix[i][j]),
+        print("\n"),
 
 
 
 if __name__ == '__main__':
     # data_visualization()
-    LogRegressionAlgorithm()
+    # LogRegressionAlgorithm()
+    rights, predict, kinds=LogRegressionAlgorithm()
+    confusion_matrix(rights, predict, kinds)
