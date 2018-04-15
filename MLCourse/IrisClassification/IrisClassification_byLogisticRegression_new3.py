@@ -127,7 +127,7 @@ if __name__ == '__main__':
     x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
     x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
     grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
-    # print("grid_test = \n", grid_test)
+    print("grid_test = \n", grid_test)
 
     grid_hat = predict_fun(grid_test,W.transpose())  # 预测分类值
     grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
@@ -148,8 +148,8 @@ if __name__ == '__main__':
     plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
     plt.xlabel(u'花萼长度', fontsize=13)
     plt.ylabel(u'花萼宽度', fontsize=13)
-    plt.xlim(x1_min, x1_max)
-    plt.ylim(x2_min, x2_max)
+    plt.xlim(x1_min, x1_max) # x 轴范围
+    plt.ylim(x2_min, x2_max) # y 轴范围
     plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
     # plt.grid()
     plt.show()
