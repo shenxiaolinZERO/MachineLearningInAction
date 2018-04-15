@@ -24,7 +24,7 @@ def data_visualization():
 
     with open('IRIS_dataset.txt','r') as f:
         for line in f:
-           linedata=line.split(' ')
+           linedata=line.split(',')
            datas.append(linedata[:-1]) #前4列是4个属性的值
            labels.append(linedata[-1].replace('\n','')) #最后一列是类别
     datas=np.array(datas)
@@ -64,16 +64,66 @@ def LogRegressionAlgorithm():
     datas=[]
     labels=[]
 
-    with open('IRIS_dataset.txt','r') as f:
-        for line in f:
-            linedata=line.split(' ')
-            datas.append(linedata[:-1]) #前4列是4个属性的值
-            labels.append(linedata[-1].replace('\n','')) #最后一列是类别
+    # with open('IRIS_dataset.txt','r') as f:
+    #     for line in f:
+    #         linedata=line.split(',')
+    #         datas.append(linedata[:-1]) #前4列是4个属性的值
+    #         labels.append(linedata[-1].replace('\n','')) #最后一列是类别
+
+    data_file=open('IRIS_dataset.txt','r')
+    for line in data_file.readlines():
+        # print(line)
+        linedata = line.split(',')
+        datas.append(linedata[:-1])  # 前4列是4个属性的值
+        labels.append(linedata[-1].replace('\n', ''))  # 最后一列是类别
+
     datas=np.array(datas)
     datas=datas.astype(float) #将二维的字符串数组转换成浮点数数组
     labels=np.array(labels)
     kinds=list(set(labels)) #3个类别的名字列表
-    print(datas)
+    # print(datas)
+    # print(kinds)
+    # print(labels)
+
+    means=datas.mean(axis=0) #各个属性的均值
+    stds=datas.std(axis=0) #各个属性的标准差
+    N,M= datas.shape[0],datas.shape[1]+1  #N是样本数，M是参数向量的维
+    K=3 #k=3是类别数
+    data=np.ones((N,M))
+    data[:,1:]=(datas-means)/stds #对原始数据进行标准差归一化
+
+    W=np.zeros((K-1),M)  #存储参数矩阵
+    priorEs=np.array([1.0/N*np.sum(data[labels==kinds[i]],axis=0) for i in range(K-1)]) #各个属性的先验期望值
+    liklist=[]
+    for it in range(1000):
+        lik=0 #当前的对数似然函数值
+        for k in range(K-1): #似然函数值的第一部分
+            lik -= np.sum(np.dot(W[k],data[labels==kinds[k]].transpose()))
+        lik +=1.0/N *np.sum(np.log(np.sum(np.exp(np.dot(W,data.transpose())),axis=0)+1)) #似然函数的第二部分
+        liklist.append(lik)
+
+        wx=np.exp(np.dot(W,data.transpose()))
+        probs=np.divide(wx,1+np.sum(wx,axis=0).transpose()) # K-1 *N的矩阵
+        posteriorEs=1.0/N*np.dot(probs,data) #各个属性的后验期望值
+        gradients=posteriorEs - priorEs +1.0/100 *W #梯度，最后一项是高斯项，防止过拟合
+        W -= gradients #对参数进行修正
+
+    #probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
+    probM =np.ones((N,K))
+    probM[:,:-1]=np.exp(np.dot(data,W.transpose()))
+    probM /=np.array([np.sum(probM,axis=1)]).transpose() #得到概率
+
+    predict =np.argmax(probM,axis=1).astype(int) #取最大概率对应的类别
+
+    #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
+    rights=np.zeros(N)
+    rights[labels == kinds[1]]=1
+    rights[labels == kinds[2]]=2
+    rights =rights.astype(int)
+
+    #误判的个数
+    print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
+
 
 
 if __name__ == '__main__':
