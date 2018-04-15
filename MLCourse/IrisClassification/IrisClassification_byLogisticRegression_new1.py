@@ -118,6 +118,11 @@ def LogRegressionAlgorithm():
     print("W为：",W)
     #probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
     probM =np.ones((N,K))
+    print("data.shape:", data.shape)
+    print("datas.shape:", datas.shape)
+    print("W.shape:", W.shape)
+    print("probM.shape:", probM.shape)
+
     probM[:,:-1]=np.exp(np.dot(data,W.transpose()))
     probM /=np.array([np.sum(probM,axis=1)]).transpose() #得到概率
 
