@@ -119,7 +119,7 @@ if __name__ == '__main__':
     # print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
     # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
 
-    # print(predict)
+    print("predict为：",predict)
 
     # (5)绘制图像-------------------------------------------------------
     # 1.确定坐标轴范围，x，y轴分别表示两个特征
@@ -128,6 +128,7 @@ if __name__ == '__main__':
     x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
     grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
     # print("grid_test = \n", grid_test)
+
     grid_hat = predict_fun(grid_test,W.transpose())  # 预测分类值
     grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
 
