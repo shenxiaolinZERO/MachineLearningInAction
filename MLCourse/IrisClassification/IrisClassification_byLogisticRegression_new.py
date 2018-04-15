@@ -14,6 +14,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import itertools as it
 import matplotlib as mpl
+from matplotlib import colors
 
 
 def data_visualization():
@@ -129,6 +130,39 @@ def LogRegressionAlgorithm():
     rights =rights.astype(int)
 
 
+    # (5)绘制图像-------------------------------------------------------
+    # 1.确定坐标轴范围，x，y轴分别表示两个特征
+    x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
+    x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
+    x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
+    grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
+    # print 'grid_test = \n', grid_test
+    grid_hat = predict  # 预测分类值
+    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+
+    # 2.指定默认字体
+    mpl.rcParams['font.sans-serif'] = [u'SimHei']
+    mpl.rcParams['axes.unicode_minus'] = False
+
+    # 3.绘制
+    cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
+    cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
+
+    alpha = 0.5
+
+    plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
+    # plt.scatter(x[:, 0], x[:, 1], c=y, edgecolors='k', s=50, cmap=cm_dark)  # 样本
+    plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
+    plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
+    plt.xlabel(u'花萼长度', fontsize=13)
+    plt.ylabel(u'花萼宽度', fontsize=13)
+    plt.xlim(x1_min, x1_max)
+    plt.ylim(x2_min, x2_max)
+    plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
+    # plt.grid()
+    plt.show()
+    #-------------------------------------------------------
+
 
     #误判的个数
     print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
@@ -158,37 +192,6 @@ if __name__ == '__main__':
     # data_visualization()
     # LogRegressionAlgorithm()
     rights, predict, kinds=LogRegressionAlgorithm()
-    confusion_matrix(rights, predict, kinds)
-    
-    # (5)绘制图像
-    # 1.确定坐标轴范围，x，y轴分别表示两个特征
-    x1_min, x1_max = x[:, 0].min(), x[:, 0].max()  # 第0列的范围
-    x2_min, x2_max = x[:, 1].min(), x[:, 1].max()  # 第1列的范围
-    x1, x2 = np.mgrid[x1_min:x1_max:200j, x2_min:x2_max:200j]  # 生成网格采样点
-    grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
-    # print 'grid_test = \n', grid_test
-    grid_hat = classifier.predict(grid_test)       # 预测分类值
-    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    # confusion_matrix(rights, predict, kinds)
 
 
-    # 2.指定默认字体
-    mpl.rcParams['font.sans-serif'] = [u'SimHei']
-    mpl.rcParams['axes.unicode_minus'] = False
-
-    # 3.绘制
-    cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
-    cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
-
-    alpha=0.5
-
-    plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light) # 预测值的显示
-    # plt.scatter(x[:, 0], x[:, 1], c=y, edgecolors='k', s=50, cmap=cm_dark)  # 样本
-    plt.plot(x[:, 0], x[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
-    plt.scatter(x_test[:, 0], x_test[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
-    plt.xlabel(u'花萼长度', fontsize=13)
-    plt.ylabel(u'花萼宽度', fontsize=13)
-    plt.xlim(x1_min, x1_max)
-    plt.ylim(x2_min, x2_max)
-    plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
-    # plt.grid()
-    plt.show()
