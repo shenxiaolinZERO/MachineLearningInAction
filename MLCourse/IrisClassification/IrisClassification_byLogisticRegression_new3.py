@@ -16,7 +16,7 @@ import itertools as it
 import matplotlib as mpl
 from matplotlib import colors
 
-
+# LogisticRegression算法，训练数据，传入参数为数据集（包括特征数据及标签数据），结果返回训练得到的参数 W
 def LogRegressionAlgorithm(datas,labels):
     kinds = list(set(labels))  # 3个类别的名字列表
     means=datas.mean(axis=0) #各个属性的均值
@@ -43,14 +43,17 @@ def LogRegressionAlgorithm(datas,labels):
         posteriorEs=1.0/N*np.dot(probs,data) #各个属性的后验期望值
         gradients=posteriorEs - priorEs +1.0/100 *W #梯度，最后一项是高斯项，防止过拟合
         W -= gradients #对参数进行修正
-    print("W为：",W)
+    print("输出W为：",W)
+    return W
 
-    return W,data
-
-
-def predict_fun(data,W):
-    N, M = data.shape[0], datas.shape[1] + 1  # N是样本数，M是参数向量的维
+#根据训练得到的参数W和数据集，进行预测。输入参数为数据集和由LogisticRegression算法得到的参数W，返回值为预测的值
+def predict_fun(datas,W):
+    N, M = datas.shape[0], datas.shape[1] + 1  # N是样本数，M是参数向量的维
     K = 3  # k=3是类别数
+    data = np.ones((N, M))
+    means = datas.mean(axis=0)  # 各个属性的均值
+    stds = datas.std(axis=0)  # 各个属性的标准差
+    data[:, 1:] = (datas - means) / stds  # 对原始数据进行标准差归一化
 
     # probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
     probM = np.ones((N, K))
@@ -58,29 +61,12 @@ def predict_fun(data,W):
     print("datas.shape:", datas.shape)
     print("W.shape:", W.shape)
     print("probM.shape:", probM.shape)
-
     probM[:, :-1] = np.exp(np.dot(data, W.transpose()))
     probM /= np.array([np.sum(probM, axis=1)]).transpose()  # 得到概率
 
     predict = np.argmax(probM, axis=1).astype(int)  # 取最大概率对应的类别
-    print(predict)
-
-    # #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
-    # rights=np.zeros(N)
-    # rights[labels == kinds[1]]=1
-    # rights[labels == kinds[2]]=2
-    # rights =rights.astype(int)
-
+    print("输出predict为：", predict)
     return predict
-
-
-
-    # #误判的个数
-    # print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
-    # # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
-    # return rights, predict, kinds
-
-
 
 
 if __name__ == '__main__':
@@ -99,6 +85,7 @@ if __name__ == '__main__':
     #         datas.append(linedata[:-1]) #前4列是4个属性的值
     #         labels.append(linedata[-1].replace('\n','')) #最后一列是类别
 
+    #读入数据集的数据：
     data_file=open('IRIS_dataset.txt','r')
     for line in data_file.readlines():
         # print(line)
@@ -112,16 +99,23 @@ if __name__ == '__main__':
     labels=np.array(labels)
     kinds=list(set(labels)) #3个类别的名字列表
 
-    W,data=LogRegressionAlgorithm(datas,labels)
+    W=LogRegressionAlgorithm(datas,labels)
     
-    predict=predict_fun(data,W)
-    #误判的个数
-    # print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
+    predict=predict_fun(datas,W)
+
+    # rights 列表储存代表原始标签数据的序号，根据labels 数据生成
+    rights = np.zeros(N)
+    rights[labels == kinds[1]] = 1
+    rights[labels == kinds[2]] = 2
+    rights = rights.astype(int)
+    # 误判的个数
+    print("误判的样本的个数为：%d\n" % np.sum(predict != rights))
     # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
+
 
     print("predict为：",predict)
 
-    # (5)绘制图像-------------------------------------------------------
+    # 绘制图像-------------------------------------------------------
     # 1.确定坐标轴范围，x，y轴分别表示两个特征
     x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
     x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
@@ -129,9 +123,19 @@ if __name__ == '__main__':
     grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
     print("grid_test = \n", grid_test)
 
-    grid_hat = predict_fun(grid_test,W.transpose())  # 预测分类值
-    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    # W, data = LogRegressionAlgorithm(grid_test, labels)
 
+    # N, M = grid_test.shape[0], grid_test.shape[1] + 1  # N是样本数，M是参数向量的维
+    # K = 3  # k=3是类别数
+    #
+    # data = np.ones((N, M))
+    # means = grid_test.mean(axis=0)  # 各个属性的均值
+    # stds = grid_test.std(axis=0)  # 各个属性的标准差
+    # data[:, 1:] = (grid_test - means) / stds  # 对原始数据进行标准差归一化
+
+    grid_hat = predict_fun(grid_test,W)  # 预测分类值
+    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    print("grid_hat = \n", grid_hat)
     # 2.指定默认字体
     mpl.rcParams['font.sans-serif'] = [u'SimHei']
     mpl.rcParams['axes.unicode_minus'] = False
@@ -150,7 +154,7 @@ if __name__ == '__main__':
     plt.ylabel(u'花萼宽度', fontsize=13)
     plt.xlim(x1_min, x1_max) # x 轴范围
     plt.ylim(x2_min, x2_max) # y 轴范围
-    plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
+    plt.title(u'鸢尾花LogisticRegression二特征分类', fontsize=15)
     # plt.grid()
     plt.show()
     # -------------------------------------------------------
