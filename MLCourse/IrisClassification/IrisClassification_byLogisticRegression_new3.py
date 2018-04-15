@@ -43,26 +43,30 @@ def LogRegressionAlgorithm(datas,labels):
         posteriorEs=1.0/N*np.dot(probs,data) #各个属性的后验期望值
         gradients=posteriorEs - priorEs +1.0/100 *W #梯度，最后一项是高斯项，防止过拟合
         W -= gradients #对参数进行修正
+    print("W为：",W)
 
-    return W 
+    return W
 
-def predic_fun(data,W):
+
+def predic_fun(datas,W):
     N, M = datas.shape[0], datas.shape[1] + 1  # N是样本数，M是参数向量的维
     K = 3  # k=3是类别数
+    # probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
+    probM = np.ones((N, K))
+    print("data.shape:", datas.shape)
+    print("W.shape:", W.shape)
+    print("probM.shape:", probM.shape)
+    probM[:, :-1] = np.exp(np.dot(datas, W))
+    probM /= np.array([np.sum(probM, axis=1)]).transpose()  # 得到概率
 
-    #probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
-    probM =np.ones((N,K))
-    probM[:,:-1]=np.exp(np.dot(data,W.transpose()))
-    probM /=np.array([np.sum(probM,axis=1)]).transpose() #得到概率
-
-    predict =np.argmax(probM,axis=1).astype(int) #取最大概率对应的类别
+    predict = np.argmax(probM, axis=1).astype(int)  # 取最大概率对应的类别
+    print(predict)
 
     # #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
     # rights=np.zeros(N)
     # rights[labels == kinds[1]]=1
     # rights[labels == kinds[2]]=2
     # rights =rights.astype(int)
-
 
     return predict
 
@@ -108,38 +112,41 @@ if __name__ == '__main__':
     W=LogRegressionAlgorithm(datas,labels)
     
     predic=predic_fun(datas,W)
-    
-    print(predict)
+    #误判的个数
+    # print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
+    # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
 
-    # (5)绘制图像-------------------------------------------------------
-    # 1.确定坐标轴范围，x，y轴分别表示两个特征
-    x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
-    x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
-    x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
-    grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
-    # print("grid_test = \n", grid_test)
-    grid_hat = predict  # 预测分类值
-    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    # print(predict)
 
-    # 2.指定默认字体
-    mpl.rcParams['font.sans-serif'] = [u'SimHei']
-    mpl.rcParams['axes.unicode_minus'] = False
-
-    # 3.绘制
-    cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
-    cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
-
-    alpha = 0.5
-
-    plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
-    # plt.scatter(x[:, 0], x[:, 1], c=y, edgecolors='k', s=50, cmap=cm_dark)  # 样本
-    plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
-    plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
-    plt.xlabel(u'花萼长度', fontsize=13)
-    plt.ylabel(u'花萼宽度', fontsize=13)
-    plt.xlim(x1_min, x1_max)
-    plt.ylim(x2_min, x2_max)
-    plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
-    # plt.grid()
-    plt.show()
-    # -------------------------------------------------------
+    # # (5)绘制图像-------------------------------------------------------
+    # # 1.确定坐标轴范围，x，y轴分别表示两个特征
+    # x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
+    # x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
+    # x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
+    # grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
+    # # print("grid_test = \n", grid_test)
+    # grid_hat = predict_fun(grid_test,W)  # 预测分类值
+    # grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    #
+    # # 2.指定默认字体
+    # mpl.rcParams['font.sans-serif'] = [u'SimHei']
+    # mpl.rcParams['axes.unicode_minus'] = False
+    #
+    # # 3.绘制
+    # cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
+    # cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
+    #
+    # alpha = 0.5
+    #
+    # plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
+    # # plt.scatter(x[:, 0], x[:, 1], c=y, edgecolors='k', s=50, cmap=cm_dark)  # 样本
+    # plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
+    # plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
+    # plt.xlabel(u'花萼长度', fontsize=13)
+    # plt.ylabel(u'花萼宽度', fontsize=13)
+    # plt.xlim(x1_min, x1_max)
+    # plt.ylim(x2_min, x2_max)
+    # plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
+    # # plt.grid()
+    # plt.show()
+    # # -------------------------------------------------------

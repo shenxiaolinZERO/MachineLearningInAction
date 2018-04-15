@@ -115,7 +115,7 @@ def LogRegressionAlgorithm():
         posteriorEs=1.0/N*np.dot(probs,data) #各个属性的后验期望值
         gradients=posteriorEs - priorEs +1.0/100 *W #梯度，最后一项是高斯项，防止过拟合
         W -= gradients #对参数进行修正
-
+    print("W为：",W)
     #probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
     probM =np.ones((N,K))
     probM[:,:-1]=np.exp(np.dot(data,W.transpose()))
