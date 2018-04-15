@@ -62,7 +62,7 @@ classifier=svm.SVC(kernel='rbf',gamma=0.1,decision_function_shape='ovo',C=0.8)
 # decision_function_shape='ovr'时，为one v rest分类问题，即一个类别与其他类别进行划分。
 #开始训练
 classifier.fit(x_train,y_train.ravel())
-
+#调用ravel()函数将矩阵转变成一维数组
 
 
 def show_accuracy(y_hat,y_train,str):

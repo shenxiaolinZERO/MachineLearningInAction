@@ -59,4 +59,4 @@ def data_visualization():
     plt.show()
 
 if __name__ == '__main__':
-    data_visualization()
+    # data_visualization()
