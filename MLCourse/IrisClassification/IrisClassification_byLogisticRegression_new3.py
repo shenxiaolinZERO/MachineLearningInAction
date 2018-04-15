@@ -99,11 +99,14 @@ if __name__ == '__main__':
     labels=np.array(labels)
     kinds=list(set(labels)) #3个类别的名字列表
 
+    #通过LogisticRegression算法得到参数 W
     W=LogRegressionAlgorithm(datas,labels)
-    
+
+    #通过预测函数predict_fun（）函数进行预测
     predict=predict_fun(datas,W)
 
     # rights 列表储存代表原始标签数据的序号，根据labels 数据生成
+    N = datas.shape[0]
     rights = np.zeros(N)
     rights[labels == kinds[1]] = 1
     rights[labels == kinds[2]] = 2
@@ -113,48 +116,36 @@ if __name__ == '__main__':
     # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
 
 
-    print("predict为：",predict)
-
-    # 绘制图像-------------------------------------------------------
-    # 1.确定坐标轴范围，x，y轴分别表示两个特征
-    x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
-    x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
-    x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
-    grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
-    print("grid_test = \n", grid_test)
-
-    # W, data = LogRegressionAlgorithm(grid_test, labels)
-
-    # N, M = grid_test.shape[0], grid_test.shape[1] + 1  # N是样本数，M是参数向量的维
-    # K = 3  # k=3是类别数
+    # # 绘制图像-------------------------------------------------------
+    # # 1.确定坐标轴范围，x，y轴分别表示两个特征
+    # x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
+    # x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
+    # x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
+    # grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
+    # print("grid_test = \n", grid_test)
     #
-    # data = np.ones((N, M))
-    # means = grid_test.mean(axis=0)  # 各个属性的均值
-    # stds = grid_test.std(axis=0)  # 各个属性的标准差
-    # data[:, 1:] = (grid_test - means) / stds  # 对原始数据进行标准差归一化
-
-    grid_hat = predict_fun(grid_test,W)  # 预测分类值
-    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
-    print("grid_hat = \n", grid_hat)
-    # 2.指定默认字体
-    mpl.rcParams['font.sans-serif'] = [u'SimHei']
-    mpl.rcParams['axes.unicode_minus'] = False
-
-    # 3.绘制
-    cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
-    cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
-
-    alpha = 0.5
-
-    plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
-    # plt.scatter(x[:, 0], x[:, 1], c=y, edgecolors='k', s=50, cmap=cm_dark)  # 样本
-    plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
-    plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
-    plt.xlabel(u'花萼长度', fontsize=13)
-    plt.ylabel(u'花萼宽度', fontsize=13)
-    plt.xlim(x1_min, x1_max) # x 轴范围
-    plt.ylim(x2_min, x2_max) # y 轴范围
-    plt.title(u'鸢尾花LogisticRegression二特征分类', fontsize=15)
-    # plt.grid()
-    plt.show()
+    # grid_hat = predict_fun(grid_test,W)  # 预测分类值
+    # grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    # print("grid_hat = \n", grid_hat)
+    # # 2.指定默认字体
+    # mpl.rcParams['font.sans-serif'] = [u'SimHei']
+    # mpl.rcParams['axes.unicode_minus'] = False
+    #
+    # # 3.绘制图像
+    # cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
+    # cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
+    #
+    # alpha = 0.5
+    #
+    # plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
+    # # plt.scatter(datas[:, 0], datas[:, 1], c=labels, edgecolors='k', s=50, cmap=cm_dark)  # 样本
+    # plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
+    # plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
+    # plt.xlabel(u'花萼长度', fontsize=13)
+    # plt.ylabel(u'花萼宽度', fontsize=13)
+    # plt.xlim(x1_min, x1_max) # x 轴范围
+    # plt.ylim(x2_min, x2_max) # y 轴范围
+    # plt.title(u'鸢尾花LogisticRegression二特征分类', fontsize=15)
+    # # plt.grid()
+    # plt.show()
     # -------------------------------------------------------
