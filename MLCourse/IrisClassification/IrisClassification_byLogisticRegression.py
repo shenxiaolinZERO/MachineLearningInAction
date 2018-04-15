@@ -2,7 +2,12 @@
 # encoding: utf-8
 __author__ = 'Administrator'
 
-
+# 1.Choosing a proper method to classify the IRIS dataset.
+# 2.Visualizing raw data and classified data, respectively.
+# 3.Submitting with executable codes.
+# 4.Submitting a document with the algorithm description and results in detail.
+# 5.Submiting to email: XMUML2018@163.com
+# 6.The deadline is 2018.04.16.
 
 import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
@@ -142,6 +147,7 @@ def confusion_matrix(rights,predict,kinds):
         for j in range(K):
             print("%-12d"%matrix[i][j]),
         print("\n"),
+
 
 
 
