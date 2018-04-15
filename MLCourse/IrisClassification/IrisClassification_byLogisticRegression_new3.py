@@ -44,6 +44,12 @@ def LogRegressionAlgorithm(datas,labels):
         gradients=posteriorEs - priorEs +1.0/100 *W #梯度，最后一项是高斯项，防止过拟合
         W -= gradients #对参数进行修正
 
+    return W 
+
+def predic_fun(data,W):
+    N, M = datas.shape[0], datas.shape[1] + 1  # N是样本数，M是参数向量的维
+    K = 3  # k=3是类别数
+
     #probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
     probM =np.ones((N,K))
     probM[:,:-1]=np.exp(np.dot(data,W.transpose()))
@@ -51,21 +57,21 @@ def LogRegressionAlgorithm(datas,labels):
 
     predict =np.argmax(probM,axis=1).astype(int) #取最大概率对应的类别
 
-    #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
-    rights=np.zeros(N)
-    rights[labels == kinds[1]]=1
-    rights[labels == kinds[2]]=2
-    rights =rights.astype(int)
+    # #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
+    # rights=np.zeros(N)
+    # rights[labels == kinds[1]]=1
+    # rights[labels == kinds[2]]=2
+    # rights =rights.astype(int)
 
 
     return predict
 
 
 
-    #误判的个数
-    print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
-    # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
-    return rights, predict, kinds
+    # #误判的个数
+    # print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
+    # # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
+    # return rights, predict, kinds
 
 
 
@@ -99,7 +105,10 @@ if __name__ == '__main__':
     labels=np.array(labels)
     kinds=list(set(labels)) #3个类别的名字列表
 
-    predict=LogRegressionAlgorithm(datas,labels)
+    W=LogRegressionAlgorithm(datas,labels)
+    
+    predic=predic_fun(datas,W)
+    
     print(predict)
 
     # (5)绘制图像-------------------------------------------------------
