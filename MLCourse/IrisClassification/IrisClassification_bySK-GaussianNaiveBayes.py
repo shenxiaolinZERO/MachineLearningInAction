@@ -55,8 +55,8 @@ x_train,x_test,y_train,y_test=model_selection.train_test_split(x,y,random_state=
 
 
 #（3）搭建模型，训练GaussianNB分类器
-# classifier=GaussianNB()
-classifier=BernoulliNB()
+classifier=GaussianNB()
+# classifier=BernoulliNB()
 #开始训练
 classifier.fit(x_train,y_train.ravel())
 
