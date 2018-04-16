@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'Xiaolin Shen'
 from sklearn.naive_bayes import GaussianNB,BernoulliNB
 import numpy as np
 import pandas as pd
