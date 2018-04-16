@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'xiaolin Shen'
+# Version : IrisClassification_byLogisticRegression_new3
 
 # 1.Choosing a proper method to classify the IRIS dataset.
 # 2.Visualizing raw data and classified data, respectively.
@@ -16,7 +17,7 @@ import itertools as it
 import matplotlib as mpl
 from matplotlib import colors
 
-
+# LogisticRegression算法，训练数据，传入参数为数据集（包括特征数据及标签数据），结果返回训练得到的参数 W
 def LogRegressionAlgorithm(datas,labels):
     kinds = list(set(labels))  # 3个类别的名字列表
     means=datas.mean(axis=0) #各个属性的均值
@@ -43,31 +44,30 @@ def LogRegressionAlgorithm(datas,labels):
         posteriorEs=1.0/N*np.dot(probs,data) #各个属性的后验期望值
         gradients=posteriorEs - priorEs +1.0/100 *W #梯度，最后一项是高斯项，防止过拟合
         W -= gradients #对参数进行修正
+    print("输出W为：",W)
+    return W
 
-    #probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
-    probM =np.ones((N,K))
-    probM[:,:-1]=np.exp(np.dot(data,W.transpose()))
-    probM /=np.array([np.sum(probM,axis=1)]).transpose() #得到概率
+#根据训练得到的参数W和数据集，进行预测。输入参数为数据集和由LogisticRegression算法得到的参数W，返回值为预测的值
+def predict_fun(datas,W):
+    N, M = datas.shape[0], datas.shape[1] + 1  # N是样本数，M是参数向量的维
+    K = 3  # k=3是类别数
+    data = np.ones((N, M))
+    means = datas.mean(axis=0)  # 各个属性的均值
+    stds = datas.std(axis=0)  # 各个属性的标准差
+    data[:, 1:] = (datas - means) / stds  # 对原始数据进行标准差归一化
 
-    predict =np.argmax(probM,axis=1).astype(int) #取最大概率对应的类别
+    # probM每行三个元素，分别表示data中对应样本被判给三个类别的概率
+    probM = np.ones((N, K))
+    print("data.shape:", data.shape)
+    print("datas.shape:", datas.shape)
+    print("W.shape:", W.shape)
+    print("probM.shape:", probM.shape)
+    probM[:, :-1] = np.exp(np.dot(data, W.transpose()))
+    probM /= np.array([np.sum(probM, axis=1)]).transpose()  # 得到概率
 
-    #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
-    rights=np.zeros(N)
-    rights[labels == kinds[1]]=1
-    rights[labels == kinds[2]]=2
-    rights =rights.astype(int)
-
-
+    predict = np.argmax(probM, axis=1).astype(int)  # 取最大概率对应的类别
+    print("输出predict为：", predict)
     return predict
-
-
-
-    #误判的个数
-    print("误判的样本的个数为：%d\n"%np.sum(predict !=rights))
-    # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
-    return rights, predict, kinds
-
-
 
 
 if __name__ == '__main__':
@@ -86,6 +86,7 @@ if __name__ == '__main__':
     #         datas.append(linedata[:-1]) #前4列是4个属性的值
     #         labels.append(linedata[-1].replace('\n','')) #最后一列是类别
 
+    #读入数据集的数据：
     data_file=open('IRIS_dataset.txt','r')
     for line in data_file.readlines():
         # print(line)
@@ -99,38 +100,71 @@ if __name__ == '__main__':
     labels=np.array(labels)
     kinds=list(set(labels)) #3个类别的名字列表
 
-    predict=LogRegressionAlgorithm(datas,labels)
-    print(predict)
+    #通过LogisticRegression算法得到参数 W
+    W=LogRegressionAlgorithm(datas,labels)
 
-    # (5)绘制图像-------------------------------------------------------
+    #通过预测函数predict_fun（）函数进行预测
+    predict=predict_fun(datas,W)
+
+    # rights 列表储存代表原始标签数据的序号，根据labels 数据生成
+    N = datas.shape[0]
+    rights = np.zeros(N)
+    rights[labels == kinds[1]] = 1
+    rights[labels == kinds[2]] = 2
+    rights = rights.astype(int)
+    # 误判的个数
+    print("误判的样本的个数为：%d\n" % np.sum(predict != rights))
+    # print("LR分类器的准确率为：%f\n"%(int(np.sum(predict !=rights)/int(N))))
+
+
+    # 绘制图像-------------------------------------------------------
     # 1.确定坐标轴范围，x，y轴分别表示两个特征
     x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
     x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
     x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
     grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
-    # print("grid_test = \n", grid_test)
-    grid_hat = predict  # 预测分类值
-    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    print("grid_test = \n", grid_test)
 
+    grid_hat = predict_fun(grid_test,W)  # 预测分类值
+    grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    print("grid_hat = \n", grid_hat)
     # 2.指定默认字体
     mpl.rcParams['font.sans-serif'] = [u'SimHei']
     mpl.rcParams['axes.unicode_minus'] = False
 
-    # 3.绘制
+    # 3.绘制图像
     cm_light = mpl.colors.ListedColormap(['#A0FFA0', '#FFA0A0', '#A0A0FF'])
     cm_dark = mpl.colors.ListedColormap(['g', 'r', 'b'])
 
     alpha = 0.5
 
     plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
-    # plt.scatter(x[:, 0], x[:, 1], c=y, edgecolors='k', s=50, cmap=cm_dark)  # 样本
+    # plt.scatter(datas[:, 0], datas[:, 1], c=labels, edgecolors='k', s=50, cmap=cm_dark)  # 样本
     plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
     plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
     plt.xlabel(u'花萼长度', fontsize=13)
     plt.ylabel(u'花萼宽度', fontsize=13)
-    plt.xlim(x1_min, x1_max)
-    plt.ylim(x2_min, x2_max)
-    plt.title(u'鸢尾花SVM二特征分类', fontsize=15)
+    plt.xlim(x1_min, x1_max) # x 轴范围
+    plt.ylim(x2_min, x2_max) # y 轴范围
+    plt.title(u'鸢尾花LogisticRegression二特征分类', fontsize=15)
     # plt.grid()
     plt.show()
     # -------------------------------------------------------
+
+##注：
+# 1、scatter
+# 用来画散点图的，对样本点着色。如下：X为一个n*2的矩阵，代表n个2维样本点，且每个样本点对应一个label y，用y来对颜色变量c赋值来区分颜色，按照cmap来布局。
+# plt.scatter(X[:, 0], X[:, 1], c=y, zorder=10, cmap=plt.cm.Paired)
+
+# 2、pcolormesh
+# 用法：类似np.pcolor ，是对坐标点着色。
+# np.pcolormesh(X, Y, C, **kwargs)
+# 例如有样本点（X[i，j] , Y[i，j]），对样本周围（包括样本所在坐标）的四个坐标点进行着色，C代表着色方案，kwargs里可以设置着色配置。
+# (X[i,   j],   Y[i,   j]),
+# (X[i,   j+1], Y[i,   j+1]),
+# (X[i+1, j],   Y[i+1, j]),
+# (X[i+1, j+1], Y[i+1, j+1]).
+# 样例：plt.pcolormesh(XX, YY, Z>0, cmap=plt.cm.Paired)
+
+#绘制图像的代码只适用于使用二特征进行训练的情况。
+#如果要使用四个特征进行训练，则需要将“绘制图像”代码注释掉才可以运行成功。
