@@ -11,15 +11,16 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySVM.coverage" NAME="IrisClassification_bySVM Coverage Results" MODIFIED="1523500166694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new1.coverage" NAME="IrisClassification_byLogisticRegression_new1 Coverage Results" MODIFIED="1523848584296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$logRegression.coverage" NAME="logRegression Coverage Results" MODIFIED="1523692394972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch05LogisticRegression" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySK_SVM.coverage" NAME="IrisClassification_bySK-SVM Coverage Results" MODIFIED="1523847705544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byGaussianNaiveBayes.coverage" NAME="IrisClassification_byGaussianNaiveBayes Coverage Results" MODIFIED="1523502750123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_v1.coverage" NAME="IrisClassification_byLogisticRegression_v1 Coverage Results" MODIFIED="1523848660503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new3.coverage" NAME="IrisClassification_byLogisticRegression_new3 Coverage Results" MODIFIED="1523808504655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySK_LogisticRegression.coverage" NAME="IrisClassification_bySK-LogisticRegression Coverage Results" MODIFIED="1523847866194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new1.coverage" NAME="IrisClassification_byLogisticRegression_new1 Coverage Results" MODIFIED="1523793852545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$logRegression.coverage" NAME="logRegression Coverage Results" MODIFIED="1523692394972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch05LogisticRegression" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new.coverage" NAME="IrisClassification_byLogisticRegression_new Coverage Results" MODIFIED="1523765973652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression.coverage" NAME="IrisClassification_byLogisticRegression Coverage Results" MODIFIED="1523501765756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new2.coverage" NAME="IrisClassification_byLogisticRegression_new2 Coverage Results" MODIFIED="1523767142961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySK_SVM.coverage" NAME="IrisClassification_bySK-SVM Coverage Results" MODIFIED="1523847705544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byGaussianNaiveBayes.coverage" NAME="IrisClassification_byGaussianNaiveBayes Coverage Results" MODIFIED="1523502750123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression__1_.coverage" NAME="IrisClassification_byLogisticRegression (1) Coverage Results" MODIFIED="1523765750573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySK_GaussianNaiveBayes.coverage" NAME="IrisClassification_bySK-GaussianNaiveBayes Coverage Results" MODIFIED="1523848098220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
   </component>
@@ -28,20 +29,8 @@
       <file leaf-file-name="IrisClassification_byLogisticRegression_v1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
-              <folding>
-                <element signature="e#383#401#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IrisClassification_byLogisticRegression_new1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_new1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
+            <state relative-caret-position="673">
+              <caret line="166" column="7" lean-forward="true" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
               <folding>
                 <element signature="e#383#401#0" expanded="true" />
               </folding>
@@ -104,6 +93,7 @@
         <option value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_bySK-SVM.py" />
         <option value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_bySK-GaussianNaiveBayes.py" />
         <option value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression.py" />
+        <option value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_v1.py" />
       </list>
     </option>
   </component>
@@ -189,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.IrisClassification_bySK-GaussianNaiveBayes">
+  <component name="RunManager" selected="Python.IrisClassification_byLogisticRegression_v1">
     <configuration name="IrisClassification_byLogisticRegression_new1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -209,7 +199,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="IrisClassification_byLogisticRegression_new3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="IrisClassification_byLogisticRegression_v1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -222,7 +212,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MachineLearningInAction" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_new3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_v1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -287,18 +277,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-SVM" />
-      <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-LogisticRegression" />
-      <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-GaussianNaiveBayes" />
+      <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-LogisticRegression" />
+      <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-GaussianNaiveBayes" />
+      <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v1" />
+      <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-GaussianNaiveBayes" />
-        <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-LogisticRegression" />
-        <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-SVM" />
-        <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new3" />
-        <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
+        <item index="0" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-GaussianNaiveBayes" />
+        <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-LogisticRegression" />
+        <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-SVM" />
       </list>
     </recent_temporary>
   </component>
@@ -324,11 +314,11 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25829726" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37662336" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27933383" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32172596" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -533,16 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_new1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-          <folding>
-            <element signature="e#383#401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_new3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1884">
@@ -553,10 +533,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_new1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="181" column="30" lean-forward="true" selection-start-line="181" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="87" column="27" lean-forward="true" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+        <state relative-caret-position="673">
+          <caret line="166" column="7" lean-forward="true" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
           <folding>
             <element signature="e#383#401#0" expanded="true" />
           </folding>

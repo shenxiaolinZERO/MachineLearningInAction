@@ -121,7 +121,7 @@ def LogRegressionAlgorithm():
     probM /=np.array([np.sum(probM,axis=1)]).transpose() #得到概率
 
     predict =np.argmax(probM,axis=1).astype(int) #取最大概率对应的类别
-    print(predict)
+    print("predict为：",predict)
     #rights 列表储存代表原始标签数据的序号，根据labels 数据生成
     rights=np.zeros(N)
     rights[labels == kinds[1]]=1
@@ -159,3 +159,10 @@ if __name__ == '__main__':
     # LogRegressionAlgorithm()
     rights, predict, kinds=LogRegressionAlgorithm()
     # confusion_matrix(rights, predict, kinds)
+
+# predict为： [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+#  2 2 2 2 0 2 2 2 2 2 2 2 2 1 1 1 0 1 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+#  1 1 1 1 0 0 0 0 0 0 2 2 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 1 1 0 1 1 1 1
+#  1 1 0 0 1 1 1 1 0 1 0 1 0 1 1 0 0 1 1 1 1 1 1 0 1 1 1 0 1 1 1 0 1 1 1 0 1
+#  1 0]
+# 误判的样本的个数为：30
