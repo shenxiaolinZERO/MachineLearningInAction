@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'xiaolin Shen'
+# Version : IrisClassification_byLogisticRegression_new3
 
 # 1.Choosing a proper method to classify the IRIS dataset.
 # 2.Visualizing raw data and classified data, respectively.
@@ -149,3 +150,18 @@ if __name__ == '__main__':
     # plt.grid()
     plt.show()
     # -------------------------------------------------------
+
+##注：
+# 1、scatter
+# 用来画散点图的，对样本点着色。如下：X为一个n*2的矩阵，代表n个2维样本点，且每个样本点对应一个label y，用y来对颜色变量c赋值来区分颜色，按照cmap来布局。
+# plt.scatter(X[:, 0], X[:, 1], c=y, zorder=10, cmap=plt.cm.Paired)
+
+# 2、pcolormesh
+# 用法：类似np.pcolor ，是对坐标点着色。
+# np.pcolormesh(X, Y, C, **kwargs)
+# 例如有样本点（X[i，j] , Y[i，j]），对样本周围（包括样本所在坐标）的四个坐标点进行着色，C代表着色方案，kwargs里可以设置着色配置。
+# (X[i,   j],   Y[i,   j]),
+# (X[i,   j+1], Y[i,   j+1]),
+# (X[i+1, j],   Y[i+1, j]),
+# (X[i+1, j+1], Y[i+1, j+1]).
+# 样例：plt.pcolormesh(XX, YY, Z>0, cmap=plt.cm.Paired)

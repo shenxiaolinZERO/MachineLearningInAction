@@ -10,7 +10,6 @@ from matplotlib import colors
 
 
 
-
 # 当使用numpy中的loadtxt函数导入该数据集时，假设数据类型dtype为浮点型，但是很明显数据集的第五列的数据类型是字符串并不是浮点型。
 # 因此需要额外做一个工作，即通过loadtxt()函数中的converters参数将第五列通过转换函数映射成浮点类型的数据。
 # 首先，我们要写出一个转换函数：
