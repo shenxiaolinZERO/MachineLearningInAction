@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'Xiaolin Shen'
 from sklearn import svm
 import numpy as np
 from sklearn import model_selection

@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'Xiaolin Shen'
 from sklearn.linear_model import LogisticRegression
 import numpy as np
 import pandas as pd
