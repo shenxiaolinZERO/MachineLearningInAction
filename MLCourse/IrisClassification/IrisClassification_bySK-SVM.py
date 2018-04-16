@@ -62,6 +62,11 @@ classifier=svm.SVC(kernel='rbf',gamma=0.1,decision_function_shape='ovo',C=0.8)
 #开始训练
 classifier.fit(x_train,y_train.ravel())
 #调用ravel()函数将矩阵转变成一维数组
+# （ravel()函数与flatten()的区别）
+# 两者所要实现的功能是一致的（将多维数组降为一维），
+# 两者的区别在于返回拷贝（copy）还是返回视图（view），
+# numpy.flatten() 返回一份拷贝，对拷贝所做的修改不会影响（reflects）原始矩阵，
+# 而numpy.ravel()返回的是视图（view），会影响（reflects）原始矩阵。
 
 
 def show_accuracy(y_hat,y_train,str):
@@ -94,7 +99,6 @@ grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点，再通过stack()
 print("grid_test = \n", grid_test)
 # print("x = \n",x)
 grid_hat = classifier.predict(grid_test)       # 预测分类值
-
 
 print("grid_hat = \n", grid_hat)
 # print(x1.shape())
