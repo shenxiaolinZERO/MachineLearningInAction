@@ -121,13 +121,16 @@ if __name__ == '__main__':
     # 1.确定坐标轴范围，x，y轴分别表示两个特征
     x1_min, x1_max = datas[:, 0].min(), datas[:, 0].max()  # 第0列的范围
     x2_min, x2_max = datas[:, 1].min(), datas[:, 1].max()  # 第1列的范围
-    x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点
+    x1, x2 = np.mgrid[x1_min:x1_max:150j, x2_min:x2_max:150j]  # 生成网格采样点，横轴为属性x1，纵轴为属性x2
     grid_test = np.stack((x1.flat, x2.flat), axis=1)  # 测试点
+    #.flat 函数将两个矩阵都变成两个一维数组，调用stack函数组合成一个二维数组
     print("grid_test = \n", grid_test)
 
     grid_hat = predict_fun(grid_test,W)  # 预测分类值
     grid_hat = grid_hat.reshape(x1.shape)  # 使之与输入的形状相同
+    #grid_hat本来是一唯的，调用reshape()函数修改形状，将其grid_hat转换为两个特征（长度和宽度）
     print("grid_hat = \n", grid_hat)
+    print("grid_hat.shape: = \n", grid_hat.shape) # (150, 150)
     # 2.指定默认字体
     mpl.rcParams['font.sans-serif'] = [u'SimHei']
     mpl.rcParams['axes.unicode_minus'] = False
@@ -138,18 +141,24 @@ if __name__ == '__main__':
 
     alpha = 0.5
 
-    plt.pcolormesh(x1, x2, grid_hat, cmap=cm_light)  # 预测值的显示
+    plt.pcolormesh(x1, x2, grid_hat, cmap=plt.cm.Paired)  # 预测值的显示
+    # 调用pcolormesh()函数将x1、x2两个网格矩阵和对应的预测结果grid_hat绘制在图片上
+    # 可以发现输出为三个颜色区块，分布表示分类的三类区域。cmap=plt.cm.Paired/cmap=cm_light表示绘图样式选择Paired主题
     # plt.scatter(datas[:, 0], datas[:, 1], c=labels, edgecolors='k', s=50, cmap=cm_dark)  # 样本
     plt.plot(datas[:, 0], datas[:, 1], 'o', alpha=alpha, color='blue', markeredgecolor='k')
+    ##绘制散点图
     plt.scatter(datas[:, 0], datas[:, 1], s=120, facecolors='none', zorder=10)  # 圈中测试集样本
-    plt.xlabel(u'花萼长度', fontsize=13)
-    plt.ylabel(u'花萼宽度', fontsize=13)
+    plt.xlabel(u'花萼长度', fontsize=13)  #X轴标签
+    plt.ylabel(u'花萼宽度', fontsize=13)  #Y轴标签
     plt.xlim(x1_min, x1_max) # x 轴范围
     plt.ylim(x2_min, x2_max) # y 轴范围
     plt.title(u'鸢尾花LogisticRegression二特征分类', fontsize=15)
+    # plt.legend(loc=2)  # 左上角绘制图标
     # plt.grid()
     plt.show()
     # -------------------------------------------------------
+
+
 
 ##注：
 # 1、scatter
