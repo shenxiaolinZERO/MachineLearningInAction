@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import itertools as it
 import matplotlib as mpl
 
-
+# 初始数据的可视化展示
 def data_visualization():
     mpl.rcParams['xtick.labelsize']=6
     mpl.rcParams['ytick.labelsize']=6
