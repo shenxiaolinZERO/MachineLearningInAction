@@ -12,7 +12,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySVM.coverage" NAME="IrisClassification_bySVM Coverage Results" MODIFIED="1523500166694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new1.coverage" NAME="IrisClassification_byLogisticRegression_new1 Coverage Results" MODIFIED="1523848584296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$logRegression.coverage" NAME="logRegression Coverage Results" MODIFIED="1523692394972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch05LogisticRegression" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$logRegression.coverage" NAME="logRegression Coverage Results" MODIFIED="1523955787298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch05LogisticRegression" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySK_SVM.coverage" NAME="IrisClassification_bySK-SVM Coverage Results" MODIFIED="1523847705544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byGaussianNaiveBayes.coverage" NAME="IrisClassification_byGaussianNaiveBayes Coverage Results" MODIFIED="1523502750123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_v1.coverage" NAME="IrisClassification_byLogisticRegression_v1 Coverage Results" MODIFIED="1523848660503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
@@ -27,23 +27,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IrisClassification_byLogisticRegression_v2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_v2.py">
+      <file leaf-file-name="logRegression.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Ch05LogisticRegression/logRegression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3234">
-              <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
               <folding>
-                <element signature="e#439#457#0" expanded="true" />
+                <element signature="e#85#103#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logRegression.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Ch05LogisticRegression/logRegression.py">
+      <file leaf-file-name="NaiveBayes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ch04NaiveBayes/NaiveBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="84">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinearRegression.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ch08LinearRegression/LinearRegression.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -123,12 +133,23 @@
             <path>
               <item name="MachineLearningInAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningInAction" type="462c0819:PsiDirectoryNode" />
+              <item name="Ch04NaiveBayes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningInAction" type="462c0819:PsiDirectoryNode" />
               <item name="Ch05LogisticRegression" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MachineLearningInAction" type="b2602c69:ProjectViewProjectNode" />
               <item name="MachineLearningInAction" type="462c0819:PsiDirectoryNode" />
               <item name="MLCourse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MachineLearningInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MachineLearningInAction" type="462c0819:PsiDirectoryNode" />
+              <item name="MLCourse" type="462c0819:PsiDirectoryNode" />
+              <item name="IrisClassification" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.IrisClassification_byLogisticRegression_v2">
+  <component name="RunManager" selected="Python.logRegression">
     <configuration name="IrisClassification_byLogisticRegression_new1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -238,39 +259,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="IrisClassification_bySK-GaussianNaiveBayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="logRegression" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MLCourse/IrisClassification" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ch05LogisticRegression" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="MachineLearningInAction" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_bySK-GaussianNaiveBayes.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ch05LogisticRegression/logRegression.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-GaussianNaiveBayes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v1" />
-      <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
-      <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.logRegression" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v1" />
-        <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_bySK-GaussianNaiveBayes" />
+        <item index="0" class="java.lang.String" itemvalue="Python.logRegression" />
+        <item index="1" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_v1" />
+        <item index="4" class="java.lang.String" itemvalue="Python.IrisClassification_byLogisticRegression_new1" />
       </list>
     </recent_temporary>
   </component>
@@ -296,11 +317,11 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43145162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19197708" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16404012" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -332,7 +353,7 @@
         <state relative-caret-position="3234">
           <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <element signature="e#439#457#0" expanded="true" />
+            <element signature="e#439#457#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -341,7 +362,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -349,6 +372,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -377,6 +401,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -391,6 +416,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -416,13 +442,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MLCourse.py" />
-    <entry file="file://$PROJECT_DIR$/Ch08LinearRegression/LinearRegression.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ch05LogisticRegression/testSet.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -434,13 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Ch04NaiveBayes/NaiveBayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -497,19 +509,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MLCourse/IrisClassification/IrisClassification_byLogisticRegression_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3234">
-          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+        <state relative-caret-position="1006">
+          <caret line="160" column="0" lean-forward="true" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
-            <element signature="e#439#457#0" expanded="true" />
+            <element signature="e#439#457#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ch04NaiveBayes/NaiveBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ch08LinearRegression/LinearRegression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch05LogisticRegression/logRegression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="189">
+          <caret line="45" column="45" lean-forward="true" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

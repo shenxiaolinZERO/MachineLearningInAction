@@ -77,11 +77,12 @@ def plotBestFit(wei):
 if __name__ == '__main__':
     dataArr,labelMat=loadDataSet()
     weights1=gradAscent(dataArr,labelMat)
-    print(weights1)
+    print("gradAscent's weights1：\n",weights1)
     # [[4.12414349]
     #  [0.48007329]
     #  [-0.6168482]]
-    weights2=stochasticGradAscent0(dataArr,labelMat)
-    print(weights2)
-    plotBestFit(weights2)
+    plotBestFit(weights1) #Yes,can plot
+    # weights2=stochasticGradAscent0(dataArr,labelMat)
+    # print(weights2)
+    plotBestFit(weights1)
 
