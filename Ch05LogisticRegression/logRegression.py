@@ -41,7 +41,8 @@ def stochasticGradAscent0(dataMatIn,classLabels):
     labelMat = mat(classLabels).transpose()
     m,n =shape(dataMatrix)
     alpha=0.01
-    weights=ones(n)
+    weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵
+    print("weights.shape:",weights.shape)
     for i in range(m):
         h=sigmoid(sum(dataMatrix[i]*weights))
         error=labelMat[i]-h
