@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'Xiaolin Shen'
 # 20180414 Sat
 
 from math import *
