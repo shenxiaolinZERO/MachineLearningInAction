@@ -61,11 +61,17 @@ def gradAscent(dataMatIn, classLabels):
     maxCycles= 500  #迭代次数
     weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵 （n原是特征的个数，这里也就是系数的个数了）
     for k in range(maxCycles):
-        h=sigmoid(dataMatrix * weights ) #h是一个列向量，不是一个数。列向量的元素个数=样本个数，这里是100。
+        h=sigmoid(dataMatrix * weights ) #h是一个元素为一系列浮点数的列向量，不是一个数。列向量的元素个数=样本个数，这里是100。
         # 对应的，运算dataMatrix * weights代表的不止一次乘积计算，，事实上该运算包含了300次的乘积。
-        error=(labelMat-h)
+        # print("h为：",h)
+        error=(labelMat-h) #计算真实类别与预测类别的差值。labelMat元素取值0/1
+        # print("error为：",error) #值有正有负。
         weights=weights+alpha * dataMatrix.transpose() * error
     return weights
+        # gradAscent's weights1：
+        #  [[ 4.12414349]
+        #  [ 0.48007329]
+        #  [-0.6168482 ]]
 
 #随机梯度上升算法函数
 def stochasticGradAscent0(dataMatIn,classLabels):
@@ -100,7 +106,7 @@ def plotBestFit(wei):
     ax.scatter(xcord1,ycord1,s=30,c='red',marker='s')
     ax.scatter(xcord2,ycord2,s=30,c='green')
     x=arange(-3.0,3.0,0.1)
-    y=(-weights[0]-weights[1]*x)/weights[2]
+    y=(-weights[0]-weights[1]*x)/weights[2]  #最佳拟合直线
     ax.plot(x,y)
     plt.xlabel('X1')
     plt.ylabel('X2')
@@ -110,16 +116,16 @@ def plotBestFit(wei):
 if __name__ == '__main__':
     dataArr,labelMat=loadDataSet()
 
-    # #---最原始的梯度上升算法：------------------------------------------
-    # weights1=gradAscent(dataArr,labelMat)
-    # print("gradAscent's weights1：\n",weights1)
-    # # [[4.12414349]
-    # #  [0.48007329]
-    # #  [-0.6168482]]
-    # plotBestFit(weights1) #Yes,can plot
+    #---最原始的梯度上升算法：------------------------------------------
+    weights1=gradAscent(dataArr,labelMat)
+    print("gradAscent's weights1：\n",weights1)
+    # [[4.12414349]
+    #  [0.48007329]
+    #  [-0.6168482]]
+    plotBestFit(weights1) #Yes,can plot
 
-    # ---使用随机梯度上升算法：------------------------------------------
-    weights2=stochasticGradAscent0(dataArr,labelMat)
-    print(weights2)
-    plotBestFit(weights2)
+    # # ---使用随机梯度上升算法：------------------------------------------
+    # weights2=stochasticGradAscent0(dataArr,labelMat)
+    # print(weights2)
+    # plotBestFit(weights2)
 
