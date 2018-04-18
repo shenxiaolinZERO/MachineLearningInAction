@@ -37,8 +37,8 @@ def loadDataSet():
     fr=open('testSet.txt')
     for line in fr.readlines():
         lineArr=line.strip().split()
-        dataMat.append([1.0,float(lineArr[0]),float(lineArr[1])]) #特征值X0=1.0（为了计算方便）, X1, X2
-        labelMat.append(int(lineArr[2])) #第三个值是数据对应的类别标签
+        dataMat.append([1.0,float(lineArr[0]),float(lineArr[1])]) #特征值X0=1.0（为了计算方便）, X1, X2。100×3
+        labelMat.append(int(lineArr[2])) #第三个值是数据对应的类别标签。100×1
     return dataMat,labelMat
 
 #sigmoid 函数
@@ -91,7 +91,7 @@ def stochasticGradAscent0(dataMatIn,classLabels):
 #画出数据集合 Logistic回归最佳拟合曲线
 def plotBestFit(wei):
     weights=wei.getA()
-    dataMat,labelMat=loadDataSet()
+    dataMat,labelMat=loadDataSet() # dataMat：100×3。labelMat：100×1。
     dataArr=array(dataMat)
     n=shape(dataArr)[0]
     xcord1=[]; ycord1=[]
@@ -107,6 +107,9 @@ def plotBestFit(wei):
     ax.scatter(xcord2,ycord2,s=30,c='green')
     x=arange(-3.0,3.0,0.1)
     y=(-weights[0]-weights[1]*x)/weights[2]  #最佳拟合直线
+    # 此处设置了 sigmoid 函数为0，回忆：0是两个分类（类别1和类别0）的分界处。
+    # 因此设定 0=w0x0+w1x1+w2x2，然后解出X2和X1的关系式（即分隔线的方程，注意X0=1） ： x2=(-w0-w1x1)/w2
+
     ax.plot(x,y)
     plt.xlabel('X1')
     plt.ylabel('X2')
