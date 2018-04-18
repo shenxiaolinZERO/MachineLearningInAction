@@ -73,20 +73,36 @@ def gradAscent(dataMatIn, classLabels):
         #  [ 0.48007329]
         #  [-0.6168482 ]]
 
-#随机梯度上升算法函数
-def stochasticGradAscent0(dataMatIn,classLabels):
-    dataMatrix = mat(dataMatIn)
-    labelMat = mat(classLabels).transpose()
+#Background : GA在每次更新回归系数时，都需要遍历整个数据集，
+# 该方法在处理100个左右的数据集尚可，但如果有数十亿样本和成千上万的特征，计算复杂度太高了。
+# 一种改进的方法是：一次仅用一个样本点来更新回归系数，即为SGA。
+# 由于可以在新样本到来时对分类器进行增量式更新，因而SGA是一个在线学习算法（VS 一次处理所有数据被称作是“批处理”）。
+
+#随机梯度上升（Stochastic Gradient Ascent）算法函数
+#与梯度上升（Gradient Ascent）算法的区别：1、GA是变量h 和误差error都是向量，而SGA则全是数值；
+#                                    2、SGA没有矩阵的转换过程，所有变量的数据类型都是Numpy数组。
+# 随机梯度上升算法的伪代码：
+# 所有回归系数初始化为1
+# 对数据集中每个样本：
+#     计算该样本的梯度
+#     使用alpha×gradient更新回归系数值
+# 返回回归系数值
+def stochasticGradAscent0(dataMatrix,classLabels):
+    # dataMatrix = mat(dataMatIn)
+    # labelMat = mat(classLabels).transpose()
+    dataMatrix=array(dataMatrix)
     m,n =shape(dataMatrix)
     alpha=0.01
-    weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵
+    weights=ones(n)
     print("weights.shape:",weights.shape)
     for i in range(m):
         h=sigmoid(sum(dataMatrix[i]*weights))
         error=labelMat[i]-h
         weights =weights + alpha * error * dataMatrix[i]
     return weights
-
+    # weights.shape: (3,)
+    # [ 1.01702007  0.85914348 -0.36579921]
+    # PDF :P42
 
 #画出数据集合 Logistic回归最佳拟合曲线
 def plotBestFit(wei):
@@ -119,16 +135,16 @@ def plotBestFit(wei):
 if __name__ == '__main__':
     dataArr,labelMat=loadDataSet()
 
-    #---最原始的梯度上升算法：------------------------------------------
-    weights1=gradAscent(dataArr,labelMat)
-    print("gradAscent's weights1：\n",weights1)
-    # [[4.12414349]
-    #  [0.48007329]
-    #  [-0.6168482]]
-    plotBestFit(weights1) #Yes,can plot
+    # #---最原始的梯度上升算法：------------------------------------------
+    # weights1=gradAscent(dataArr,labelMat)
+    # print("gradAscent's weights1：\n",weights1)
+    # # [[4.12414349]
+    # #  [0.48007329]
+    # #  [-0.6168482]]
+    # plotBestFit(weights1) #Yes,can plot
 
-    # # ---使用随机梯度上升算法：------------------------------------------
-    # weights2=stochasticGradAscent0(dataArr,labelMat)
-    # print(weights2)
+    # ---使用随机梯度上升算法：------------------------------------------
+    weights2=stochasticGradAscent0(dataArr,labelMat)
+    print(weights2)
     # plotBestFit(weights2)
 
