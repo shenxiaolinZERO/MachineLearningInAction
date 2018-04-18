@@ -37,8 +37,8 @@ def loadDataSet():
     fr=open('testSet.txt')
     for line in fr.readlines():
         lineArr=line.strip().split()
-        dataMat.append([1.0,float(lineArr[0]),float(lineArr[1])]) #特征值X0=1.0, X1, X2
-        labelMat.append(int(lineArr[2]))
+        dataMat.append([1.0,float(lineArr[0]),float(lineArr[1])]) #特征值X0=1.0（为了计算方便）, X1, X2
+        labelMat.append(int(lineArr[2])) #第三个值是数据对应的类别标签
     return dataMat,labelMat
 
 #sigmoid 函数
@@ -53,14 +53,16 @@ def sigmoid(inX):
 #     使用alpha×gradient更新回归系数的向量
 #     返回回归系数
 def gradAscent(dataMatIn, classLabels):
-    dataMatrix=mat(dataMatIn)
-    labelMat=mat(classLabels).transpose()
+    #获得输入数据并将它们转换成 Numpy 矩阵
+    dataMatrix=mat(dataMatIn) #第一个参数，是一个二维Numpy数组，每列代表每个不同的特征（包含两个特征X1和X2，再加上第0维特征X0，故共有3列），每行代表每个训练样本。故是100×3的矩阵
+    labelMat=mat(classLabels).transpose() #第二个参数，是类别标签，是一个1×100的行向量。为了便于计算，需要转置为列向量。
     m,n =shape(dataMatrix)
     alpha=0.001  #目标移动步长
     maxCycles= 500  #迭代次数
-    weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵
+    weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵 （n原是特征的个数，这里也就是系数的个数了）
     for k in range(maxCycles):
-        h=sigmoid(dataMatrix * weights ) #h是一个列向量，不是一个数
+        h=sigmoid(dataMatrix * weights ) #h是一个列向量，不是一个数。列向量的元素个数=样本个数，这里是100。
+        # 对应的，运算dataMatrix * weights代表的不止一次乘积计算，，事实上该运算包含了300次的乘积。
         error=(labelMat-h)
         weights=weights+alpha * dataMatrix.transpose() * error
     return weights
