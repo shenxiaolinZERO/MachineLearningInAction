@@ -2,10 +2,15 @@
 # encoding: utf-8
 __author__ = 'Xiaolin Shen'
 # 20180414 Sat
+# 20180418 Wed
 
 from math import *
 from numpy import *
 import matplotlib.pyplot as plt
+
+#--------------------Logistic 回归的一般过程
+#（1）收集数据：采用任意方法收集数据
+
 
 #打开文本文件并逐行读取
 def loadDataSet():
