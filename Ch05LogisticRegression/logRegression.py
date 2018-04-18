@@ -24,6 +24,12 @@ import matplotlib.pyplot as plt
 #缺点：容易欠拟合，分类精度可能不高。
 #适用的数据类型：数值型和标称型数据。
 
+# 为了实现Logistic 回归分类器，我们可以在每个特征上都乘以一个回归系数，然后把所有的结果值相加，将这个总和代入 Sigmoid函数中，
+# 进而得到一个范围在0~1之间的数值。任何大于0.5的数据被分入1类，小于0.5即被归入0类。
+# 所以，Logistic 回归也可以被看成是一种概率估计。
+
+# Sigmoid函数：sig(z)=1/(1+exp(-z))
+# 输入记为z，则z =w0x0+w1x1+w2x2+w3x3+...+wnxn ==>向量的写法可为：z=w^Tx
 
 #打开文本文件并逐行读取
 def loadDataSet():
@@ -39,7 +45,13 @@ def loadDataSet():
 def sigmoid(inX):
     return 1.0/(1+exp(-inX))
 
-#梯度上升算法函数
+#--------------------梯度上升算法函数
+# 梯度上升算法的伪代码：
+# 每个回归系数初始化为1
+# 重复R次：
+#     计算整个数据集的梯度
+#     使用alpha×gradient更新回归系数的向量
+#     返回回归系数
 def gradAscent(dataMatIn, classLabels):
     dataMatrix=mat(dataMatIn)
     labelMat=mat(classLabels).transpose()
