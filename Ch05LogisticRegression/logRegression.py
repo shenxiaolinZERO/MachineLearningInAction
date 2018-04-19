@@ -147,5 +147,7 @@ if __name__ == '__main__':
     # ---使用随机梯度上升算法：------------------------------------------
     weights2=stochasticGradAscent0(dataArr,labelMat)
     print(weights2)
+    # weights.shape: (3,)
+    # [ 1.01702007  0.85914348 -0.36579921]
     plotBestFit(weights2)
 
