@@ -100,6 +100,7 @@ def stochasticGradAscent0(dataMatrix,classLabels):
         error=labelMat[i]-h
         weights =weights + alpha * error * dataMatrix[i]
     return weights
+    # 输出
     # weights.shape: (3,)
     # [ 1.01702007  0.85914348 -0.36579921]
     # PDF :P42
@@ -147,6 +148,7 @@ if __name__ == '__main__':
     # ---使用随机梯度上升算法：------------------------------------------
     weights2=stochasticGradAscent0(dataArr,labelMat)
     print(weights2)
+    #输出
     # weights.shape: (3,)
     # [ 1.01702007  0.85914348 -0.36579921]
     plotBestFit(weights2)
