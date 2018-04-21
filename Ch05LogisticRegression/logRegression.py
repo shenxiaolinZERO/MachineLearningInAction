@@ -160,21 +160,21 @@ def plotBestFit(wei):
 if __name__ == '__main__':
     dataArr,labelMat=loadDataSet()
 
-    #---最原始的梯度上升算法：------------------------------------------
-    weights1=gradAscent(dataArr,labelMat)
-    print("gradAscent's weights1：\n",weights1)
-    # [[4.12414349]
-    #  [0.48007329]
-    #  [-0.6168482]]
-    plotBestFit(weights1.getA()) #Yes,can plot （注意这里需要一个getA（））
-
-    # ---使用随机梯度上升算法：------------------------------------------
-    weights2=stochasticGradAscent0(dataArr,labelMat)
-    print(weights2)
-    #输出
-    # weights.shape: (3,)
-    # [ 1.01702007  0.85914348 -0.36579921]
-    plotBestFit(weights2)
+    # #---最原始的梯度上升算法：------------------------------------------
+    # weights1=gradAscent(dataArr,labelMat)
+    # print("gradAscent's weights1：\n",weights1)
+    # # [[4.12414349]
+    # #  [0.48007329]
+    # #  [-0.6168482]]
+    # plotBestFit(weights1.getA()) #Yes,can plot （注意这里需要一个getA（））
+    #
+    # # ---使用随机梯度上升算法：------------------------------------------
+    # weights2=stochasticGradAscent0(dataArr,labelMat)
+    # print(weights2)
+    # #输出
+    # # weights.shape: (3,)
+    # # [ 1.01702007  0.85914348 -0.36579921]
+    # plotBestFit(weights2)
 
     # ---使用改进的随机梯度上升算法：------------------------------------------
     weights2=stochasticGradAscent1(dataArr,labelMat)
