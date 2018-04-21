@@ -88,7 +88,7 @@ def gradAscent(dataMatIn, classLabels):
 #     计算该样本的梯度
 #     使用alpha×gradient更新回归系数值
 # 返回回归系数值
-def stochasticGradAscent0(dataMatrix,classLabels):
+def stochasticGradAscent0(dataMatrix,classLabels):  #拟合出来的直线效果还不错，但不像GA那么完美，这里的分类器错分了三分之一的样本
     # dataMatrix = mat(dataMatIn)
     # labelMat = mat(classLabels).transpose()
     dataMatrix=array(dataMatrix)  #注意这里是数组，不是矩阵
