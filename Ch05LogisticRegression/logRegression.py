@@ -88,7 +88,7 @@ def gradAscent(dataMatIn, classLabels):
 #     计算该样本的梯度
 #     使用alpha×gradient更新回归系数值
 # 返回回归系数值
-def stochasticGradAscent0(dataMatrix,classLabels):  #拟合出来的直线效果还不错，但不像GA那么完美，这里的分类器错分了三分之一的样本
+def stochasticGradAscent0(dataMatrix,classLabels):  #拟合出来的直线效果还不错，但不像GA那么完美，这里的分类器错分了三分之一的样本。
     # dataMatrix = mat(dataMatIn)
     # labelMat = mat(classLabels).transpose()
     dataMatrix=array(dataMatrix)  #注意这里是数组，不是矩阵
@@ -105,6 +105,9 @@ def stochasticGradAscent0(dataMatrix,classLabels):  #拟合出来的直线效果
     # weights.shape: (3,)
     # [ 1.01702007  0.85914348 -0.36579921]
     # PDF :P42
+
+
+
 
 #画出数据集合 Logistic回归最佳拟合曲线
 def plotBestFit(wei):
