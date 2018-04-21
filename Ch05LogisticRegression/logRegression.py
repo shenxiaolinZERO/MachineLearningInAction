@@ -178,7 +178,7 @@ if __name__ == '__main__':
 
     # ---使用改进的随机梯度上升算法：------------------------------------------
     weights2=stochasticGradAscent1(dataArr,labelMat)
-    print(weights2)
+    print(weights2) #TypeError: 'range' object doesn't support item deletion
     #输出
     # weights.shape: (3,)
     # [ 1.01702007  0.85914348 -0.36579921]
