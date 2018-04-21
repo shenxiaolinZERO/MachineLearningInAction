@@ -106,7 +106,26 @@ def stochasticGradAscent0(dataMatrix,classLabels):  #拟合出来的直线效果
     # [ 1.01702007  0.85914348 -0.36579921]
     # PDF :P42
 
-
+# 改进的随机梯度上升算法
+#
+def stochasticGradAscent1(dataMatrix,classLabels,numIter=150): #第3个参数为迭代次数，如果该参数没有给定的话，默认迭代150次；若给定，则算法将按照新的参数值进行迭代。
+    dataMatrix = array(dataMatrix)  # 注意这里是数组，不是矩阵
+    m,n=shape(dataMatrix)
+    weights=ones(n)
+    for j in range(numIter):
+        dataIndex=range(m)
+        for i in range(m):
+            alpha=4/(1.0+j+i)+0.01  #修改处1：alpha每次迭代时需要调整。这会缓解参数收敛图的数据波动或者高频波动。
+            # 另外，虽然alpha会随着迭代次数不断减少，但永远不会减小到0，这是因为上式中还存在一个常数项，必须这样做的原因是为了保证在多次迭代之后新数据仍然具有一定的影响。…
+            # 如果要处理的问题是动态变化的，那么可以适当加大上述常数项，来确保新的值获得更大的回归系数。
+            # 另一点值得注意的是，在降低alpha的函数中。alpha每次减少 1/(j+i)，其中j是迭代次数，i 是样本点的下标。这样当j<<max(i)时，alpha就不是严格下降的。避免参数的严格下降也常见于模拟退火算法等其他优化算法中。
+            randIndex=int(random.uniform(0,len(dataIndex)))  #修改处2：通过随机选取样本来更新回归系数。此法将减少周期性的波动。
+            # 此法每次随机从列表中选出一个值，然后从列表中删掉改值（再进行下一次迭代）。
+            h= sigmoid(sum(dataMatrix[randIndex]*weights))
+            error=classLabels[randIndex]-h
+            weights=weights+alpha*error*dataMatrix[randIndex]
+            del(dataIndex[randIndex])
+    return weights
 
 
 #画出数据集合 Logistic回归最佳拟合曲线
@@ -157,3 +176,10 @@ if __name__ == '__main__':
     # [ 1.01702007  0.85914348 -0.36579921]
     plotBestFit(weights2)
 
+    # ---使用改进的随机梯度上升算法：------------------------------------------
+    weights2=stochasticGradAscent1(dataArr,labelMat)
+    print(weights2)
+    #输出
+    # weights.shape: (3,)
+    # [ 1.01702007  0.85914348 -0.36579921]
+    plotBestFit(weights2)
