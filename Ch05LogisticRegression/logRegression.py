@@ -73,7 +73,8 @@ def gradAscent(dataMatIn, classLabels):
         #  [ 0.48007329]
         #  [-0.6168482 ]]
 
-#Background : GA在每次更新回归系数时，都需要遍历整个数据集，
+# SGA的Background :
+# GA在每次更新回归系数时，都需要遍历整个数据集，
 # 该方法在处理100个左右的数据集尚可，但如果有数十亿样本和成千上万的特征，计算复杂度太高了。
 # 一种改进的方法是：一次仅用一个样本点来更新回归系数，即为SGA。
 # 由于可以在新样本到来时对分类器进行增量式更新，因而SGA是一个在线学习算法（VS 一次处理所有数据被称作是“批处理”）。
@@ -90,7 +91,7 @@ def gradAscent(dataMatIn, classLabels):
 def stochasticGradAscent0(dataMatrix,classLabels):
     # dataMatrix = mat(dataMatIn)
     # labelMat = mat(classLabels).transpose()
-    dataMatrix=array(dataMatrix)
+    dataMatrix=array(dataMatrix)  #注意这里是数组，不是矩阵
     m,n =shape(dataMatrix)
     alpha=0.01
     weights=ones(n)
