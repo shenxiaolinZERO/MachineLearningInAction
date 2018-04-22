@@ -113,7 +113,7 @@ def stochasticGradAscent1(dataMatrix,classLabels,numIter=150): #第3个参数为
     m,n=shape(dataMatrix)
     weights=ones(n)
     for j in range(numIter):
-        dataIndex=range(m)
+        dataIndex=list(range(m))
         for i in range(m):
             alpha=4/(1.0+j+i)+0.01  #修改处1：alpha每次迭代时需要调整。这会缓解参数收敛图的数据波动或者高频波动。
             # 另外，虽然alpha会随着迭代次数不断减少，但永远不会减小到0，这是因为上式中还存在一个常数项，必须这样做的原因是为了保证在多次迭代之后新数据仍然具有一定的影响。…
@@ -178,7 +178,7 @@ if __name__ == '__main__':
 
     # ---使用改进的随机梯度上升算法：------------------------------------------
     weights2=stochasticGradAscent1(dataArr,labelMat)
-    print(weights2) #TypeError: 'range' object doesn't support item deletion
+    print(weights2) #TypeError: 'range' object doesn't support item deletion  ==》》将dataIndex=range(m) 改为dataIndex=list(range(m))即可
     #输出
     # weights.shape: (3,)
     # [ 1.01702007  0.85914348 -0.36579921]
