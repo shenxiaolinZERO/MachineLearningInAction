@@ -168,18 +168,16 @@ if __name__ == '__main__':
     # #  [-0.6168482]]
     # plotBestFit(weights1.getA()) #Yes,can plot （注意这里需要一个getA（））
     #
-    # # ---使用随机梯度上升算法：------------------------------------------
-    # weights2=stochasticGradAscent0(dataArr,labelMat)
-    # print(weights2)
-    # #输出
-    # # weights.shape: (3,)
-    # # [ 1.01702007  0.85914348 -0.36579921]
-    # plotBestFit(weights2)
+    # ---使用随机梯度上升算法：------------------------------------------
+    weights2=stochasticGradAscent0(dataArr,labelMat)
+    print(weights2)
+    #输出
+    # weights.shape: (3,)
+    # [ 1.01702007  0.85914348 -0.36579921]
+    plotBestFit(weights2)
 
     # ---使用改进的随机梯度上升算法：------------------------------------------
     weights2=stochasticGradAscent1(dataArr,labelMat)
     print(weights2) #TypeError: 'range' object doesn't support item deletion  ==》》将dataIndex=range(m) 改为dataIndex=list(range(m))即可
-    #输出
-    # weights.shape: (3,)
-    # [ 1.01702007  0.85914348 -0.36579921]
+    #输出：[ 14.8256154    1.05210617  -1.84133504]
     plotBestFit(weights2)
