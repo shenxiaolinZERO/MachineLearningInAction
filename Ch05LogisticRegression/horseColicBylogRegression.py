@@ -29,10 +29,13 @@ __author__ = 'Administrator'
 #     这样做的直觉在于，我们需要的是一个在更新时不会影响系数的值。因为回归系数的更新公式如下：
 #     weights=weights+alpha*error*dataMatrix[randIndex]。
 #     如果dataMatrix的某特征对应值为0，那么该特征的系数将不做更新，即：weights=weights
+#   另外，由于sigmoid（0）=0.5，即它对结果的预测不具有任何倾向性，因此上述做法也不会对误差项造成任何影响。
+#   基于上述原因，将缺失值用0代替既可以保留现有数据，也不需要对优化算法进行修改。
+#   此外，该数据集中的特征取值一般不为0，因此在某种意义上说它也满足“特殊值”这个要求。
+#第二，若在测试数据集中发现了一条数据的类别标签已经缺失，
 
 
 
-weights=weights+alpha*error*dataMatrix[randIndex]
 
 
 #P45
