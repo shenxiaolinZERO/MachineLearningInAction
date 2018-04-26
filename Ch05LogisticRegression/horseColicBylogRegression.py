@@ -23,4 +23,12 @@ __author__ = 'Administrator'
 #4.使用相似样本的均值添补缺失值；
 #5.使用另外的机器学习算法预测缺失值。
 
+#在预处理阶段需要做的两件事：
+#第一，所有的缺失值必须用一个实数值来替换
+
+
+
+weights=weights+alpha*error*dataMatrix[randIndex]
+
+
 #P45
