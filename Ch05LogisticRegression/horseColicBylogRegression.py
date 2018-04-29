@@ -2,6 +2,8 @@
 # encoding: utf-8
 __author__ = 'Administrator'
 
+import logRegression as lr
+
 #使用Logistic回归的随机梯度上升算法来解决病马的生死预测问题
 #数据包含368个样本和28个特征。
 
@@ -41,6 +43,15 @@ __author__ = 'Administrator'
 #-------------------测试算法：用Logistic回归进行分类
 #使用Logistic方法进行分类并不需要做很多工作，所需做的只是把测试集上每个特征向量乘以最优化方法得来的回归系数，再将该乘积结果求和，最后输入到Sigmoid函数中即可。
 #如果对应的Sigmoid值大于0.5就预测类别标签为1，否则为0。
+
+#Logistic回归分类函数
+def classifyVector(inX,weights):
+    prob = lr.sigmoid(sum(inX * weights))
+    if prob >0.5 :
+        return 1.0
+    else:
+        return 0.0
+
 
 
 
