@@ -59,7 +59,7 @@ def classifyVector(inX,weights):
 
 def colicTest():
     frTrain = open('horseColicTraining.txt') #打开训练集
-    frTest = open('hourseColicTest.txt')  #打开测试集
+    frTest = open('horseColicTest.txt')  #打开测试集
     trainingSet = [] ;trainingLabels = []
     for line in frTrain.readlines():
         currLine = line.strip().split('\t')
@@ -96,6 +96,19 @@ def multiTest():
 
 if __name__ == '__main__':
     multiTest()
+
+#程序运行结果为：
+# The error rate of this test is :0.462687
+# The error rate of this test is :0.358209
+# The error rate of this test is :0.373134
+# The error rate of this test is :0.328358
+# The error rate of this test is :0.328358
+# The error rate of this test is :0.402985
+# The error rate of this test is :0.313433
+# The error rate of this test is :0.328358
+# The error rate of this test is :0.268657
+# The error rate of this test is :0.313433
+# After 10 iterations, the average error rate is : 0.347761
 
 
 
