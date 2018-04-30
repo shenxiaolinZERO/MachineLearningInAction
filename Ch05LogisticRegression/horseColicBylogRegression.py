@@ -84,7 +84,7 @@ def colicTest():
             errorCount +=1
     errorRate=(float(errorCount)/numTestVec)
     print("The error rate of this test is :%f"%errorRate)
-    return errorRate
+    return errorRate   #函数colicTest()返回错误率
 
 #multiTest()函数的功能是调用函数colicTest()10次并求结果的平均值。
 def multiTest():
@@ -94,7 +94,8 @@ def multiTest():
         errorSum +=colicTest()
     print("After %d iterations, the average error rate is : %f"%(numTests,errorSum/float(numTests)))
 
-
+if __name__ == '__main__':
+    multiTest()
 
 
 
