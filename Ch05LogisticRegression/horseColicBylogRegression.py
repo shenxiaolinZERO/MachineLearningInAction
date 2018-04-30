@@ -111,6 +111,10 @@ if __name__ == '__main__':
 # After 10 iterations, the average error rate is : 0.347761
 
 
+#从上面的结果可以看到，10次迭代之后的平均错误率为35%。事实上，这个结果并不差。因为有30%的数据缺失。
+#当然，如果调整colicTest()中的迭代次数和stochasticGradAscent1()中的步长，平均错误率可以降到20%左右。
+
+
 
 
 
