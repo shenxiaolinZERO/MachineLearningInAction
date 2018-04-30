@@ -59,12 +59,12 @@ def gradAscent(dataMatIn, classLabels):
     m,n =shape(dataMatrix)
     alpha=0.001  #目标移动步长
     maxCycles= 500  #迭代次数
-    weights=ones((n,1)) #初始化为 n 行1 列的单位矩阵 （n原是特征的个数，这里也就是系数的个数了）
+    weights=ones((n,1)) #初始化为 n 行 1 列的单位矩阵 （n原是特征的个数，这里也就是系数的个数了）
     for k in range(maxCycles):
         h=sigmoid(dataMatrix * weights ) #h是一个元素为一系列浮点数的列向量，不是一个数。列向量的元素个数=样本个数，这里是100。
         # 对应的，运算dataMatrix * weights代表的不止一次乘积计算，，事实上该运算包含了300次的乘积。
         # print("h为：",h)
-        error=(labelMat-h) #计算真实类别与预测类别的差值。labelMat元素取值0/1
+        error=(labelMat-h) #计算真实类别与预测类别的差值。labelMat元素取值0/1。而h 是一个0到1的值。
         # print("error为：",error) #值有正有负。
         weights=weights+alpha * dataMatrix.transpose() * error
     return weights
@@ -80,7 +80,7 @@ def gradAscent(dataMatIn, classLabels):
 # 由于可以在新样本到来时对分类器进行增量式更新，因而SGA是一个在线学习算法（VS 一次处理所有数据被称作是“批处理”）。
 
 #随机梯度上升（Stochastic Gradient Ascent）算法函数
-#与梯度上升（Gradient Ascent）算法的区别：1、GA是变量h 和误差error都是向量，而SGA则全是数值；
+#与梯度上升（Gradient Ascent）算法的区别：1、GA 是变量h 和误差error都是向量，而SGA则全是数值；
 #                                    2、SGA没有矩阵的转换过程，所有变量的数据类型都是Numpy数组。
 # 随机梯度上升算法的伪代码：
 # 所有回归系数初始化为1
