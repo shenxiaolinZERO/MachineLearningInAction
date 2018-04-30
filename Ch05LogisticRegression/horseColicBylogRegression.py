@@ -3,6 +3,7 @@
 __author__ = 'Administrator'
 
 import logRegression as lr
+import numpy as np
 
 #使用Logistic回归的随机梯度上升算法来解决病马的生死预测问题
 #数据包含368个样本和28个特征。
@@ -66,8 +67,11 @@ def colicTest():
         for i in range(21):
             lineArr.append(float(currLine[i]))
         trainingSet.append(lineArr)
-        trainingLabels.append(float(currLine[21]))
+        trainingLabels.append(float(currLine[21])) #类别标签是1/0
+    #调用stochasticGradAscent1()函数来计算回归系数向量
     trainWeights=lr.stochasticGradAscent1(trainingSet,trainingLabels,500)
+
+    #在系数计算完成之后，导入测试集并计算分类错误率。（整体看来，colicTest()具有完全独立的功能，多次运行得到的结果可能稍有不同，这是因为其中有随机的成分在里面。如果在stochasticGradAscent1()函数中回归系数已经收敛，那么结果才将是确定的）
     errorCount=0
     numTestVec=0.0
     for line in frTest.readlines():
@@ -76,13 +80,13 @@ def colicTest():
         lineArr=[]
         for i in range(21):
             lineArr.append(float(currLine[i]))
-        if int(classifyVector(array(lineArr),trainWeights))!=int(currLine[21]):
+        if int(classifyVector(np.array(lineArr),trainWeights))!=int(currLine[21]):
             errorCount +=1
     errorRate=(float(errorCount)/numTestVec)
     print("The error rate of this test is :%f"%errorRate)
     return errorRate
 
-
+#multiTest()函数的功能是调用函数colicTest()10次并求结果的平均值。
 def multiTest():
     numTests=10
     errorSum=0.0
