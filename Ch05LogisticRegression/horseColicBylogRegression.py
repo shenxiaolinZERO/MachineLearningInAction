@@ -57,8 +57,8 @@ def classifyVector(inX,weights):
 
 
 def colicTest():
-    frTrain = open('horseColicTraining.txt')
-    frTest = open('hourseColicTest.txt')
+    frTrain = open('horseColicTraining.txt') #打开训练集
+    frTest = open('hourseColicTest.txt')  #打开测试集
     trainingSet = [] ;trainingLabels = []
     for line in frTrain.readlines():
         currLine = line.strip().split('\t')
@@ -75,7 +75,22 @@ def colicTest():
         currLine = line.strip().split('\t')
         lineArr=[]
         for i in range(21):
-            
+            lineArr.append(float(currLine[i]))
+        if int(classifyVector(array(lineArr),trainWeights))!=int(currLine[21]):
+            errorCount +=1
+    errorRate=(float(errorCount)/numTestVec)
+    print("The error rate of this test is :%f"%errorRate)
+    return errorRate
+
+
+def multiTest():
+    numTests=10
+    errorSum=0.0
+    for k in range(numTests):
+        errorSum +=colicTest()
+    print("After %d iterations, the average error rate is : %f"%(numTests,errorSum/float(numTests)))
+
+
 
 
 
