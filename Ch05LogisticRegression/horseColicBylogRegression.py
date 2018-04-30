@@ -45,6 +45,9 @@ import logRegression as lr
 #如果对应的Sigmoid值大于0.5就预测类别标签为1，否则为0。
 
 #Logistic回归分类函数
+
+# classifyVector()函数，以回归系数和特征向量作为输入来计算对应的Sigmoid值。
+# 如果Sigmoid 值大于0.5则函数返回1，否则返回0
 def classifyVector(inX,weights):
     prob = lr.sigmoid(sum(inX * weights))
     if prob >0.5 :
@@ -52,6 +55,27 @@ def classifyVector(inX,weights):
     else:
         return 0.0
 
+
+def colicTest():
+    frTrain = open('horseColicTraining.txt')
+    frTest = open('hourseColicTest.txt')
+    trainingSet = [] ;trainingLabels = []
+    for line in frTrain.readlines():
+        currLine = line.strip().split('\t')
+        lineArr = []
+        for i in range(21):
+            lineArr.append(float(currLine[i]))
+        trainingSet.append(lineArr)
+        trainingLabels.append(float(currLine[21]))
+    trainWeights=lr.stochasticGradAscent1(trainingSet,trainingLabels,500)
+    errorCount=0
+    numTestVec=0.0
+    for line in frTest.readlines():
+        numTestVec +=1.0
+        currLine = line.strip().split('\t')
+        lineArr=[]
+        for i in range(21):
+            
 
 
 
