@@ -1,6 +1,7 @@
 # !/usr/bin/env python
 # encoding: utf-8
 __author__ = 'Administrator'
+# 2018.04.29
 
 import logRegression as lr
 import numpy as np
