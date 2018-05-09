@@ -48,7 +48,8 @@ __author__ = 'Administrator'
 # 所需要做的围绕优化的事情就是训练分类器，一旦得到alpha的最优值，我们就得到了分隔超平面（2维平面中就是直线）并能够将之用于数据分类。
 
 #  6.3.1 Platt的SMO算法
-#  John Platt 发布了一个称为SMO的强大算法，序列最小优化（Sequential Minimal Optimization，SMO）
+#  John Platt 发布了一个称为SMO的强大算法，即序列最小优化（Sequential Minimal Optimization，SMO），用于训练SVM。
+#  
 
 
 #P48
