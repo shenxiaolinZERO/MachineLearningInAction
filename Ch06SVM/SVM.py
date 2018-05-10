@@ -63,6 +63,13 @@ __author__ = 'Administrator'
 #  为此，我们将构建一个辅助函数，用于在某个区间范围内随机选择一个整数。
 #  同时，我们也需要另一个辅助函数，用于在数值太大时对其进行调整。
 
+# SMO算法中的辅助函数
+def loadDataSet(fileName):
+    dataMat=[]; labelMat= []
+    fr=open(fileName)
+    for line in fr.readlines():
+        lineArr =line.strip().split('\t')
+        
 
 
 
