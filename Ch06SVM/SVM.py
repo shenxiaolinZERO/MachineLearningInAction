@@ -50,7 +50,8 @@ __author__ = 'Administrator'
 #  6.3.1 Platt的SMO算法
 #  John Platt 发布了一个称为SMO的强大算法，即序列最小优化（Sequential Minimal Optimization，SMO），用于训练SVM。
 #  Platt的SMO算法是将大优化问题分解为多个小优化问题来求解的。这些小优化问题往往很容易求解，并且对它们进行顺序求解的结果与将它们作为整体来求解的结果是完全一致的。在结果完全相同的同时，SMO算法的求解时间短很多。
-
+#  SMO算法的目标是求出一系列alpha和b，一旦求出了这些alpha，就很容易计算出权重向量w并得到分隔超平面。
+#  SMO算法的工作原理是：每次循环中选择
 
 #P48
 #
