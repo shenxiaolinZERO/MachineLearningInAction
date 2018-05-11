@@ -85,7 +85,7 @@ def clipAlpha(aj,H,L):
         aj=L
     return aj
 
-
+#接下来在 testSet.txt文件上应用SMO算法。
 
 
 
