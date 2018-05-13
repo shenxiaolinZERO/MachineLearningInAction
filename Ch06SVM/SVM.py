@@ -75,6 +75,9 @@ def loadDataSet(fileName):
         dataMat.append([float(lineArr[0]),float(lineArr[1])])
         labelMat.append(float(lineArr[2]))
     return dataMat,labelMat
+
+# 函数 selectJrand()有两个参数值，其中i是第一个alpha的下标，m是所有alpha的数目。
+# 
 def selectJrand(i,m):
     j=i
     while (j==i):
