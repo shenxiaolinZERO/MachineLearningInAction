@@ -85,7 +85,7 @@ def selectJrand(i,m):
         j = int(random.uniform(0,m))
     return j
 
-# 
+# 这是一个辅助函数，它是用于调整
 def clipAlpha(aj,H,L):
     if aj > H:
         aj=H
