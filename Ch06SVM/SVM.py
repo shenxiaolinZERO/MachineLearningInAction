@@ -66,7 +66,7 @@ __author__ = 'Administrator'
 # SMO算法中的辅助函数
 import random
 
-# 打开文件并对其进行逐行解析，从而得到每行的类标签和整个数据矩阵
+# 打开文件并对其进行逐行解析，从而得到每行的类标签和整个数据矩阵。
 def loadDataSet(fileName):
     dataMat=[]; labelMat= []
     fr=open(fileName)
@@ -84,6 +84,8 @@ def selectJrand(i,m):
     while (j==i):
         j = int(random.uniform(0,m))
     return j
+
+# 
 def clipAlpha(aj,H,L):
     if aj > H:
         aj=H
