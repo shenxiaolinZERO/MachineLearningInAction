@@ -78,7 +78,6 @@ def loadDataSet(fileName):
 
 # 函数 selectJrand()有两个参数值，其中i是第一个alpha的下标，m是所有alpha的数目。
 # 只要函数值不等于输入值i，函数就会进行随机选择。
-
 def selectJrand(i,m):
     j=i
     while (j==i):
@@ -95,7 +94,8 @@ def clipAlpha(aj,H,L):
 
 #接下来在 testSet.txt文件上应用SMO算法。
 
-
+dataArr,labelArr= loadDataSet('testSet.txt')
+print(labelArr)  #[-1.0, -1.0, 1.0, -1.0, ... 采用的类别标签是-1和1，而不是0和1
 
 
 #P49
