@@ -97,6 +97,11 @@ def clipAlpha(aj,H,L):
 dataArr,labelArr= loadDataSet('testSet.txt')
 print(labelArr)  #[-1.0, -1.0, 1.0, -1.0, ... 采用的类别标签是-1和1，而不是0和1
 
+# SMO函数的伪代码大致如下：
+# 1.创建一个alpha向量并将其初始化为0向量
+# 2.当迭代次数小于最大迭代次数时（外循环）
+#     对数据集中的每个数据向量（内循环）：
+
 
 #P49
 #
