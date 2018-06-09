@@ -70,7 +70,7 @@ import SVM_assistFunc as svmAss
 #接下来在 testSet.txt文件上应用SMO算法。
 
 dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
-print(labelArr)  #[-1.0, -1.0, 1.0, -1.0, ... 采用的类别标签是-1和1，而不是0和1
+# print(labelArr)  #[-1.0, -1.0, 1.0, -1.0, ... 采用的类别标签是-1和1，而不是0和1
 
 # SMO函数的伪代码大致如下：
 # 1.创建一个alpha向量并将其初始化为0向量
