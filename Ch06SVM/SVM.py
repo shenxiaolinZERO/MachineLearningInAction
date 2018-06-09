@@ -66,10 +66,10 @@ __author__ = 'Scarlett Shen'
 #  同时，我们也需要另一个辅助函数，用于在数值太大时对其进行调整。
 #            （辅助函数详见：SVM_assistFunc.py）
 
-
+import SVM_assistFunc as svmAss
 #接下来在 testSet.txt文件上应用SMO算法。
 
-dataArr,labelArr= loadDataSet('testSet.txt')
+dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 print(labelArr)  #[-1.0, -1.0, 1.0, -1.0, ... 采用的类别标签是-1和1，而不是0和1
 
 # SMO函数的伪代码大致如下：
