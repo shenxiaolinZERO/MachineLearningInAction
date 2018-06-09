@@ -1,6 +1,6 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'Scarlett Shen'
 #20180502
 
 # "SVM是最好的现成的分类器。"——这里说的“现成”指的是分类器不加修改即可直接使用。同时，这就意味着在数据上应用基本形式的SVM分类器就可以得到低错误率的结果。
@@ -60,39 +60,12 @@ __author__ = 'Administrator'
 #  在此第一个例子中，我们将会对算法进行简化处理，以便了解算法的基本工作思路，之后再基于简化版给出完整版。
 #  简化版代码虽然量少但是执行速度慢。
 #  Platt的SMO算法中的外循环确定要优化的最佳alpha对，而简化版却会跳过这一部分，首先在数据集上遍历每一个alpha，从而构成alpha对。
-#     这里有一点相当重要，就是我们要同时改变两个alpha，之所以这么做是因为我们有一个约束条件：sum\alpha·label^(j)=0
+#     这里有一点相当重要，就是我们要同时改变两个alpha，之所以这么做是因为我们有一个约束条件：sum\alpha_(i)·label^(i)=0
 #     由于改变一个alpha可能会导致该约束条件失效，因此我们总是同时改变两个alpha。
 #  为此，我们将构建一个辅助函数，用于在某个区间范围内随机选择一个整数。
 #  同时，我们也需要另一个辅助函数，用于在数值太大时对其进行调整。
 
-# SMO算法中的辅助函数
-import random
 
-# 打开文件并对其进行逐行解析，从而得到每行的类标签和整个数据矩阵。
-def loadDataSet(fileName):
-    dataMat=[]; labelMat= []
-    fr=open(fileName)
-    for line in fr.readlines():
-        lineArr =line.strip().split('\t')
-        dataMat.append([float(lineArr[0]),float(lineArr[1])])
-        labelMat.append(float(lineArr[2]))
-    return dataMat,labelMat
-
-# 函数 selectJrand()有两个参数值，其中i是第一个alpha的下标，m是所有alpha的数目。
-# 只要函数值不等于输入值i，函数就会进行随机选择。
-def selectJrand(i,m):
-    j=i
-    while (j==i):
-        j = int(random.uniform(0,m))
-    return j
-
-# 这是一个辅助函数，它是用于调整大于H或小于L的alpha值。
-def clipAlpha(aj,H,L):
-    if aj > H:
-        aj=H
-    if L > aj:
-        aj=L
-    return aj
 
 #接下来在 testSet.txt文件上应用SMO算法。
 
