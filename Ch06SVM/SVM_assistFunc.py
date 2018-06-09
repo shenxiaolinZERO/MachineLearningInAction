@@ -1,6 +1,8 @@
 # !/usr/bin/env python
 # encoding: utf-8
-__author__ = 'Administrator'
+__author__ = 'Scarlett Shen'
+
+# 2018.06.09 21:41 封装
 
 # SMO算法中的辅助函数
 import random
