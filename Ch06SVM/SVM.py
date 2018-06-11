@@ -83,7 +83,7 @@ dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 #     如果所有向量都没被优化，增加迭代数目，继续下一次循环
 
 #简化版的SMO算法程序：
-def smoSimple(dataMatIn,classLabels,C,toler):
+def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     return 0
 
 #P49
