@@ -66,6 +66,8 @@ __author__ = 'Scarlett Shen'
 #  同时，我们也需要另一个辅助函数，用于在数值太大时对其进行调整。
 #            （辅助函数详见：SVM_assistFunc.py）
 
+import math
+from  numpy import *
 import SVM_assistFunc as svmAss
 #接下来在 testSet.txt文件上应用SMO算法。
 
@@ -84,6 +86,8 @@ dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 
 #简化版的SMO算法程序：
 def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
+    dataMatrix= mat(dataMatIn)
+
     return 0
 
 #P49
