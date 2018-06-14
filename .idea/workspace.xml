@@ -33,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="447">
-              <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+              <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
               <folding>
                 <element signature="e#2272#2283#0" expanded="true" />
               </folding>
@@ -745,7 +745,7 @@
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
-          <caret line="91" column="10" lean-forward="false" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+          <caret line="91" column="25" lean-forward="false" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
           </folding>
