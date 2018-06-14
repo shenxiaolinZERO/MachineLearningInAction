@@ -94,7 +94,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     iter=0
     while(iter<maxIter):
         alphaPairsChanged = 0
-        
+        for i in range(m):
+            
     return 0
 
 #P49
