@@ -87,7 +87,9 @@ dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 #简化版的SMO算法程序：
 def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     dataMatrix= mat(dataMatIn)
-    labelMat= mat()
+    labelMat= mat(classLabels).transpose()
+    
+
 
     return 0
 
