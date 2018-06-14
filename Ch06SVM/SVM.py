@@ -97,7 +97,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
         for i in range(m):
             fXi = float(multiply(alphas,labelMat).T* \
                         (dataMatrix * dataMatrix[i,:].T)) + b
-
+            Ei = fXi -float(labelMat[i])
+            if(())
 
     return 0
 
