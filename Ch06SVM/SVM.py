@@ -88,8 +88,8 @@ dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     dataMatrix= mat(dataMatIn)
     labelMat= mat(classLabels).transpose()
-    
-
+    alphas=mat(zeros((m,1)))
+    iter=0
 
     return 0
 
