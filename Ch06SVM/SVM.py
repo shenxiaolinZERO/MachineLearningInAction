@@ -101,7 +101,9 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
             if((labelMat[i] *Ei < -toler) and (alphas[i] <C )) or \
               ((labelMat[i]*Ei > toler) and \
                (alphas[i] > 0)):
-                
+                j = svmAss.selectJrand(i,m)
+                fXj =
+
 
     return 0
 
