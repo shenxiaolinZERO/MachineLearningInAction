@@ -104,6 +104,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 j = svmAss.selectJrand(i,m)
                 fXj =float(multiply(alphas,labelMat).T*\
                            (dataMatrix*dataMatrix[j,:].T)) +b
+                Ej = fXj- float(labelMat[j])
                 
 
     return 0
