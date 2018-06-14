@@ -92,7 +92,9 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     m,n=shape(dataMatrix)
     alphas=mat(zeros((m,1)))
     iter=0
-
+    while(iter<maxIter):
+        alphaPairsChanged = 0
+        
     return 0
 
 #P49
