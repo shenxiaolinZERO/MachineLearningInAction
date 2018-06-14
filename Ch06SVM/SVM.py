@@ -95,7 +95,10 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     while(iter<maxIter):
         alphaPairsChanged = 0
         for i in range(m):
-            
+            fXi = float(multiply(alphas,labelMat).T* \
+                        (dataMatrix * dataMatrix[i,:].T)) + b
+
+
     return 0
 
 #P49
