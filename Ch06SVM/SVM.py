@@ -105,6 +105,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 fXj =float(multiply(alphas,labelMat).T*\
                            (dataMatrix*dataMatrix[j,:].T)) +b
                 Ej = fXj- float(labelMat[j])
+                alphaIold = alphas[i].copy()
                 
 
     return 0
