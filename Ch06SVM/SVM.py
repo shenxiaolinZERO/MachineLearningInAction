@@ -108,7 +108,9 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 alphaIold = alphas[i].copy()
                 alphaJold = alphas[j].copy()
                 if (labelMat[i] != labelMat[j]):
-                    
+                    L=max(0,alphas[j]-alphas[i])
+                    H=min(C,C+alphas[j]-alphas[i])
+
 
     return 0
 
