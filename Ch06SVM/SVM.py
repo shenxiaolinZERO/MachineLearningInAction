@@ -110,6 +110,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 if (labelMat[i] != labelMat[j]):
                     L=max(0,alphas[j]-alphas[i])
                     H=min(C,C+alphas[j]-alphas[i])
+                else:
+                    L=max(0,alphas[j]+alphas[i]-C)
 
 
     return 0
