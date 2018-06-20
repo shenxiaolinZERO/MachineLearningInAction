@@ -114,7 +114,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                     L=max(0,alphas[j]+alphas[i]-C)
                     H=min(C,alphas[j]+alphas[i])
                 if  L==H:
-                    print()
+                    print("L==H")
+                    continue
 
 
     return 0
