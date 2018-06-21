@@ -118,7 +118,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                     continue
                 eta = 2.0 * dataMatrix[i,:] *dataMatrix[j,:].T -\
                         dataMatrix[i,:] * dataMatrix[i,:].T - \
-                        dataMatrix[j,:]
+                        dataMatrix[j,:] * dataMatrix[j,:].T
+                
 
     return 0
 
