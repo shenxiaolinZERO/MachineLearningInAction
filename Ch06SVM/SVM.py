@@ -117,7 +117,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                     print("L==H")
                     continue
                 eta = 2.0 * dataMatrix[i,:] *dataMatrix[j,:].T -\
-
+                        dataMatrix[i,:] * dataMatrix[i,:].T - \
+                        dataMatrix[j,:]
 
     return 0
 
