@@ -127,7 +127,10 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 if (abs(alphas[j]-alphaJold)<0.00001):
                     print("j not moving enough")
                     continue
-                alphas[i] +=labelMat[j]*labelMat[i]*()
+                alphas[i] +=labelMat[j]*labelMat[i]*(alphaJold-alphas[j])
+                b1=b-Ei-labelMat[i]*(alphas[i]-alphaIold)*\
+                        dataMatrix[i,:]*dataMatrix[i,:].T - \
+                        labelMat[j]
 
 
     return 0
