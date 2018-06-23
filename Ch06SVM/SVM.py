@@ -143,7 +143,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 else:
                     b=(b1+b2)/2.0
                 alphaPairsChanged +=1
-                print()
+                print("iter: %d  i:%d, pairs changed %d "%(iter,i,alphaPairsChanged))
+                
 
 
 
