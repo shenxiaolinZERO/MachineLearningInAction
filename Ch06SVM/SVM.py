@@ -140,7 +140,11 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                     b=b1
                 elif (0<alphas[j]) and (C >alphas[j]):
                     b=b2
+                else:
+                    b=(b1+b2)/2.0
+                alphaPairsChanged +=1
                 
+
 
 
 
