@@ -122,6 +122,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 if eta >= 0:
                     print("eta >=0 ")
                     continue
+                alphas[j] -= labelMat[j]*(Ei-Ej)/eta
 
 
     return 0
