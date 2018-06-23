@@ -126,7 +126,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 alphas[j] =svmAss.clipAlpha(alphas[j],H,L)
                 if (abs(alphas[j]-alphaJold)<0.00001):
                     print("j not moving enough")
-                    
+                    continue
+                alphas[i] +=labelMat[j]*labelMat[i]*()
 
 
     return 0
