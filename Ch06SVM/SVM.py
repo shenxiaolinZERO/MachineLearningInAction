@@ -135,7 +135,9 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 b2=b-Ej-labelMat[i]*(alphas[i]-alphaIold)*\
                         dataMatrix[i,:]*dataMatrix[j,:].T - \
                         labelMat[j]*(alphas[j]-alphaJold)* \
-                        dataMatrix[j,:]*
+                        dataMatrix[j,:]*dataMatrix[j,:].T
+                if (0<alphas[i]) and (C >alphas[i]):
+                    
 
 
     return 0
