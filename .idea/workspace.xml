@@ -32,8 +32,8 @@
       <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="146" column="16" lean-forward="false" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+            <state relative-caret-position="345">
+              <caret line="149" column="12" lean-forward="false" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
               <folding>
                 <element signature="e#2272#2283#0" expanded="true" />
               </folding>
@@ -110,8 +110,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="705" />
-    <option name="y" value="18" />
+    <option name="x" value="429" />
+    <option name="y" value="31" />
     <option name="width" value="845" />
     <option name="height" value="817" />
   </component>
@@ -336,7 +336,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="705" y="18" width="845" height="817" extended-state="0" />
+    <frame x="429" y="31" width="845" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -744,8 +744,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="146" column="16" lean-forward="false" selection-start-line="146" selection-start-column="16" selection-end-line="146" selection-end-column="16" />
+        <state relative-caret-position="345">
+          <caret line="149" column="12" lean-forward="false" selection-start-line="149" selection-start-column="12" selection-end-line="149" selection-end-column="12" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
           </folding>
