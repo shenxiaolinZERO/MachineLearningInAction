@@ -147,7 +147,9 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
 
         if (alphaPairsChanged==0):
             iter +=1
-            
+        else:
+            iter = 0
+        print()
 
 
 
