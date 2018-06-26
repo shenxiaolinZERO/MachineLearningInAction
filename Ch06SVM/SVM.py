@@ -120,7 +120,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                         dataMatrix[i,:] * dataMatrix[i,:].T - \
                         dataMatrix[j,:] * dataMatrix[j,:].T
                 if eta >= 0:
-                    print("eta >=0 ")
+                    print("eta >= 0 ")
                     continue
                 alphas[j] -= labelMat[j]*(Ei-Ej)/eta
                 alphas[j] =svmAss.clipAlpha(alphas[j],H,L)
