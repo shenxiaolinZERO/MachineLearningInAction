@@ -149,7 +149,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
             iter +=1
         else:
             iter = 0
-        print()
+        print("iteration number : %d "% iter)
 
 
 
