@@ -153,7 +153,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
 
 
 
-    return b,alpha
+    return b,alphas
 
 #P49
 #
