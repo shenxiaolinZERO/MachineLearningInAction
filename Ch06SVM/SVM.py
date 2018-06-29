@@ -84,7 +84,7 @@ dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 #           如果两个向量都不能被优化，退出内循环
 #     如果所有向量都没被优化，增加迭代数目，继续下一次循环
 
-#简化版的SMO算法程序：
+#简化版的SMO算法程序：（最大 第一个程序了！）
 #   该函数有5个输入参数，分别是：数据集、类别标签、常数C、容错率和取消前最大的循环次数。
 def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     dataMatrix= mat(dataMatIn)
