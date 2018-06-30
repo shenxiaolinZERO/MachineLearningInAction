@@ -128,9 +128,10 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                     continue
                 alphas[j] -= labelMat[j]*(Ei-Ej)/eta #计算出一个新的alpha[j]
                 alphas[j] =svmAss.clipAlpha(alphas[j],H,L) #clipAlpha 这是一个辅助函数，它是用于调整大于H或小于L的alpha值。
-                if (abs(alphas[j]-alphaJold)<0.00001): # 检查alpha[j]是否有轻微变化
+                if (abs(alphas[j]-alphaJold)<0.00001): # 检查alpha[j]是否有轻微变化，是则退出for循环
                     print("j not moving enough")
                     continue
+                # alpha[i]和 alpha[j]同样进行改变，改变大小一样，但改变的方向正好相反。（即，如果一个增加，那么另一个减少）
                 alphas[i] +=labelMat[j]*labelMat[i]*(alphaJold-alphas[j])
                 b1=b-Ei-labelMat[i]*(alphas[i]-alphaIold)*\
                         dataMatrix[i,:]*dataMatrix[i,:].T - \
