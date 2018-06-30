@@ -32,10 +32,11 @@
       <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="133" column="78" lean-forward="false" selection-start-line="133" selection-start-column="78" selection-end-line="133" selection-end-column="78" />
+            <state relative-caret-position="299">
+              <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
               <folding>
                 <element signature="e#2272#2283#0" expanded="true" />
+                <element signature="e#3227#6139#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -406,6 +407,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
+            <element signature="e#3227#6139#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -416,6 +418,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
+            <element signature="e#3227#6139#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,10 +747,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="133" column="78" lean-forward="false" selection-start-line="133" selection-start-column="78" selection-end-line="133" selection-end-column="78" />
+        <state relative-caret-position="299">
+          <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
+            <element signature="e#3227#6139#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -133,14 +133,12 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                     continue
                 # alpha[i]和 alpha[j]同样进行改变，改变大小一样，但改变的方向正好相反。（即，如果一个增加，那么另一个减少）
                 alphas[i] +=labelMat[j]*labelMat[i]*(alphaJold-alphas[j])
-                b1=b-Ei-labelMat[i]*(alphas[i]-alphaIold)*\
-                        dataMatrix[i,:]*dataMatrix[i,:].T - \
-                        labelMat[j]*(alphas[j]-alphaJold)* \
-                        dataMatrix[i,:]*dataMatrix[j,:].T
-                b2=b-Ej-labelMat[i]*(alphas[i]-alphaIold)*\
-                        dataMatrix[i,:]*dataMatrix[j,:].T - \
-                        labelMat[j]*(alphas[j]-alphaJold)* \
-                        dataMatrix[j,:]*dataMatrix[j,:].T
+
+                #在对alpha[i]和 alpha[j]进行优化之后，给这两个alpha值设置一个常数项 b
+                b1=b-Ei-labelMat[i]*(alphas[i]-alphaIold)*dataMatrix[i,:]*dataMatrix[i,:].T - \
+                        labelMat[j]*(alphas[j]-alphaJold)*dataMatrix[i,:]*dataMatrix[j,:].T
+                b2=b-Ej-labelMat[i]*(alphas[i]-alphaIold)*dataMatrix[i,:]*dataMatrix[j,:].T - \
+                        labelMat[j]*(alphas[j]-alphaJold)*dataMatrix[j,:]*dataMatrix[j,:].T
                 if (0<alphas[i]) and (C >alphas[i]):
                     b=b1
                 elif (0<alphas[j]) and (C >alphas[j]):
@@ -150,6 +148,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 alphaPairsChanged +=1
                 print("iter: %d  i:%d, pairs changed %d "%(iter,i,alphaPairsChanged))
 
+        #在for循环之外，需要检查alpha值是否做了更新，若有则将iter设为0后继续运行程序。
         if (alphaPairsChanged==0):
             iter +=1
         else:
