@@ -90,8 +90,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     dataMatrix= mat(dataMatIn)
     labelMat= mat(classLabels).transpose() #由于转置了类别标签，因此得到的是一个列向量而不是列表！
     b=0
-    m,n=shape(dataMatrix)
-    alphas=mat(zeros((m,1)))
+    m,n=shape(dataMatrix)  #得到数据维度
+    alphas=mat(zeros((m,1)))  # 元素都为 0 的列矩阵
     iter=0
     while(iter<maxIter):
         alphaPairsChanged = 0
