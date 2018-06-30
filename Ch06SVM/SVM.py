@@ -100,10 +100,10 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
             fXi = float(multiply(alphas,labelMat).T* (dataMatrix * dataMatrix[i,:].T)) + b
             # Ei 为预测类别与真实类别的误差
             Ei = fXi -float(labelMat[i])
-            # 
+            #
             if((labelMat[i] *Ei < -toler) and (alphas[i] <C )) or \
               ((labelMat[i]*Ei > toler) and (alphas[i] > 0)):
-                j = svmAss.selectJrand(i,m)
+                j = svmAss.selectJrand(i,m) #随机选择第2个alpha
                 fXj =float(multiply(alphas,labelMat).T*\
                            (dataMatrix*dataMatrix[j,:].T)) +b
                 Ej = fXj- float(labelMat[j])
