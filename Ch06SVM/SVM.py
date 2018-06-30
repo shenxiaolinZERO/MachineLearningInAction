@@ -96,6 +96,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     while(iter<maxIter):
         alphaPairsChanged = 0 #先设为0，后再对整个集合顺序遍历，此变量用于记录alpha是否已经进行优化。（在循环结束时就会得知这一点）
         for i in range(m):
+            # fXi是计算出来的“预测类别”
             fXi = float(multiply(alphas,labelMat).T* \
                         (dataMatrix * dataMatrix[i,:].T)) + b
             Ei = fXi -float(labelMat[i])
