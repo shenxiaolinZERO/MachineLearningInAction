@@ -106,7 +106,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
               ((labelMat[i]*Ei > toler) and (alphas[i] > 0)):
                 j = svmAss.selectJrand(i,m) #随机选择第2个alpha
                 fXj =float(multiply(alphas,labelMat).T*(dataMatrix*dataMatrix[j,:].T)) +b # 采用与第一个alpha值相同的误差计算方法
-                Ej = fXj- float(labelMat[j])
+                Ej = fXj- float(labelMat[j])  #计算第2个alpha的误差
                 alphaIold = alphas[i].copy()
                 alphaJold = alphas[j].copy()
                 if (labelMat[i] != labelMat[j]):
