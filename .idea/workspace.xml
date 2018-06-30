@@ -32,8 +32,8 @@
       <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="128" column="54" lean-forward="false" selection-start-line="128" selection-start-column="54" selection-end-line="128" selection-end-column="54" />
+            <state relative-caret-position="256">
+              <caret line="130" column="74" lean-forward="false" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
               <folding>
                 <element signature="e#2272#2283#0" expanded="true" />
               </folding>
@@ -744,8 +744,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="128" column="54" lean-forward="false" selection-start-line="128" selection-start-column="54" selection-end-line="128" selection-end-column="54" />
+        <state relative-caret-position="256">
+          <caret line="130" column="74" lean-forward="false" selection-start-line="130" selection-start-column="74" selection-end-line="130" selection-end-column="74" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
           </folding>
