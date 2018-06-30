@@ -116,9 +116,10 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 else:
                     L=max(0,alphas[j]+alphas[i]-C)
                     H=min(C,alphas[j]+alphas[i])
-                if  L==H:
+                if  L==H: #若L和H相等，就不做任何改变，直接continue
                     print("L==H")
                     continue
+                # eta 是 alpha[j]的最优修改值
                 eta = 2.0 * dataMatrix[i,:] *dataMatrix[j,:].T -\
                         dataMatrix[i,:] * dataMatrix[i,:].T - \
                         dataMatrix[j,:] * dataMatrix[j,:].T
