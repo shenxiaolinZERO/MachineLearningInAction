@@ -99,6 +99,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
             # fXi是计算出来的“预测类别”
             fXi = float(multiply(alphas,labelMat).T* \
                         (dataMatrix * dataMatrix[i,:].T)) + b
+            # Ei 为预测类别与真实类别的误差
             Ei = fXi -float(labelMat[i])
             if((labelMat[i] *Ei < -toler) and (alphas[i] <C )) or \
               ((labelMat[i]*Ei > toler) and \
