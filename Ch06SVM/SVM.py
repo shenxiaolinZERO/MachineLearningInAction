@@ -88,7 +88,7 @@ dataArr,labelArr= svmAss.loadDataSet('testSet.txt')
 #   该函数有5个输入参数，分别是：数据集、类别标签、常数C、容错率和取消前最大的循环次数。
 def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     dataMatrix= mat(dataMatIn)
-    labelMat= mat(classLabels).transpose()
+    labelMat= mat(classLabels).transpose() #由于转置了类别标签，因此得到的是一个列向量而不是列表！
     b=0
     m,n=shape(dataMatrix)
     alphas=mat(zeros((m,1)))
