@@ -109,6 +109,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 Ej = fXj- float(labelMat[j])  #计算第2个alpha的误差
                 alphaIold = alphas[i].copy() #可将新的alpha值和老的alpha值进行比较
                 alphaJold = alphas[j].copy() #需要为alphaIold和alphaJold重新分配新的内存，否则，新旧值比较时，看不到新旧值的变化。
+                #这对if-else是为了保证alpha在0和C之间
                 if (labelMat[i] != labelMat[j]):
                     L=max(0,alphas[j]-alphas[i])
                     H=min(C,C+alphas[j]-alphas[i])
