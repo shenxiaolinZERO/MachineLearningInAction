@@ -100,7 +100,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
             fXi = float(multiply(alphas,labelMat).T* (dataMatrix * dataMatrix[i,:].T)) + b
             # Ei 为预测类别与真实类别的误差
             Ei = fXi -float(labelMat[i])
-            #
+            # 在如下的if语句中，不管是正间隔还是负间隔都会被测试。并且在该if语句中，也同时检查alpha值，以保证其不能同时等于0或C。
+            # 由于后面alpha
             if((labelMat[i] *Ei < -toler) and (alphas[i] <C )) or \
               ((labelMat[i]*Ei > toler) and (alphas[i] > 0)):
                 j = svmAss.selectJrand(i,m) #随机选择第2个alpha
