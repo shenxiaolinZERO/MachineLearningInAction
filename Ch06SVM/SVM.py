@@ -107,8 +107,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
                 j = svmAss.selectJrand(i,m) #随机选择第2个alpha
                 fXj =float(multiply(alphas,labelMat).T*(dataMatrix*dataMatrix[j,:].T)) +b # 采用与第一个alpha值相同的误差计算方法
                 Ej = fXj- float(labelMat[j])  #计算第2个alpha的误差
-                alphaIold = alphas[i].copy()
-                alphaJold = alphas[j].copy()
+                alphaIold = alphas[i].copy() #可将新的alpha值和老的alpha值进行比较
+                alphaJold = alphas[j].copy() #需要为alphaIold和alphaJold重新分配新的内存，否则，新旧值比较时，看不到新旧值的变化。
                 if (labelMat[i] != labelMat[j]):
                     L=max(0,alphas[j]-alphas[i])
                     H=min(C,C+alphas[j]-alphas[i])
