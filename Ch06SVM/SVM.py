@@ -92,9 +92,9 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     b=0
     m,n=shape(dataMatrix)  #得到数据维度
     alphas=mat(zeros((m,1)))  # 元素都为 0 的列矩阵
-    iter=0 #该变量存储的是在没有任何alphas 改变的情况下遍历数据集的次数
+    iter=0 #该变量存储的是在没有任何alpha 改变的情况下遍历数据集的次数
     while(iter<maxIter):
-        alphaPairsChanged = 0
+        alphaPairsChanged = 0 #先设为0，后再对整个集合顺序遍历，此变量用于记录alpha是否已经进行优化。
         for i in range(m):
             fXi = float(multiply(alphas,labelMat).T* \
                         (dataMatrix * dataMatrix[i,:].T)) + b
