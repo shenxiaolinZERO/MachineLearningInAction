@@ -158,6 +158,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
 
     print("b为：",b)
     print("alpha为：",alphas)
+    print("alpha >0 的为：",alphas[alphas>0])
     return b,alphas
 
 #P49
