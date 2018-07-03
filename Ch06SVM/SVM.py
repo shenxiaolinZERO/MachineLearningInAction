@@ -156,7 +156,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
         print("iteration number : %d "% iter)
 
 
-
+    print("b为：",b)
+    print("alpha为：",alphas)
     return b,alphas
 
 #P49
