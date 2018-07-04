@@ -158,7 +158,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
 
     print("b为：",b) #b为： [[-3.81943396]]
     print("alpha为：",alphas)
-    print("alpha >0 的为：",alphas[alphas>0])
+    print("alpha >0 的为：",alphas[alphas>0])  # alpha 大部分为0，只有极少数部分是大于0 的，也就是支持向量了！
     #  alpha >0 的为： [[ 0.08876539  0.00570661  0.26259661  0.04265347  0.31441515]]
     return b,alphas
 
