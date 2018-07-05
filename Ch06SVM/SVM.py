@@ -159,11 +159,15 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     print("b为：",b) #b为： [[-3.81943396]]
     print("alpha为：",alphas)
     print("alpha >0 的为：",alphas[alphas>0])  # alpha 大部分为0，只有极少数部分是大于0 的，也就是支持向量了！
-    #  alpha >0 的为：  [[ 0.1580209   0.13897164  0.07063074  0.36762328]]
-    print("支持向量的个数为：",shape(alphas[alphas>0]))  #支持向量的个数为： (1, 4)
+    #  alpha >0 的为：  [[ 0.127461    0.24133703  0.36879803]]
+    print("支持向量的个数为：",shape(alphas[alphas>0]))  #支持向量的个数为： (1, 3)
 
     # 找出是支持向量的数据点：
-    
+    for i in range(100):
+        if alphas[i] >0.0:
+            print(dataArr[i],labelArr[i])
+
+
     return b,alphas
 
 #P49

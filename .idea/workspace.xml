@@ -19,7 +19,7 @@
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_v2.coverage" NAME="IrisClassification_byLogisticRegression_v2 Coverage Results" MODIFIED="1523873670980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new3.coverage" NAME="IrisClassification_byLogisticRegression_new3 Coverage Results" MODIFIED="1523808504655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_bySK_LogisticRegression.coverage" NAME="IrisClassification_bySK-LogisticRegression Coverage Results" MODIFIED="1523847866194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
-    <SUITE FILE_PATH="coverage/MachineLearningInAction$SVM.coverage" NAME="SVM Coverage Results" MODIFIED="1530753222881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch06SVM" />
+    <SUITE FILE_PATH="coverage/MachineLearningInAction$SVM.coverage" NAME="SVM Coverage Results" MODIFIED="1530753783888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ch06SVM" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new.coverage" NAME="IrisClassification_byLogisticRegression_new Coverage Results" MODIFIED="1523765973652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression.coverage" NAME="IrisClassification_byLogisticRegression Coverage Results" MODIFIED="1523501765756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
     <SUITE FILE_PATH="coverage/MachineLearningInAction$IrisClassification_byLogisticRegression_new2.coverage" NAME="IrisClassification_byLogisticRegression_new2 Coverage Results" MODIFIED="1523848704278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MLCourse/IrisClassification" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="SVM.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="165" column="4" lean-forward="false" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
+            <state relative-caret-position="114">
+              <caret line="162" column="65" lean-forward="false" selection-start-line="162" selection-start-column="65" selection-end-line="162" selection-end-column="65" />
               <folding>
                 <element signature="e#2272#2283#0" expanded="true" />
               </folding>
@@ -464,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="165" column="4" lean-forward="false" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
+        <state relative-caret-position="114">
+          <caret line="162" column="65" lean-forward="false" selection-start-line="162" selection-start-column="65" selection-end-line="162" selection-end-column="65" />
           <folding>
             <element signature="e#2272#2283#0" expanded="true" />
           </folding>
