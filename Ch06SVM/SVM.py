@@ -163,6 +163,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     print("支持向量的个数为：",shape(alphas[alphas>0]))  #支持向量的个数为： (1, 3)
 
     # 找出是支持向量的数据点：
+    print("支持向量为：")
     for i in range(100):
         if alphas[i] >0.0:
             print(dataArr[i],labelArr[i])
