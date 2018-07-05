@@ -167,7 +167,11 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     for i in range(100):
         if alphas[i] >0.0:
             print(dataArr[i],labelArr[i])
-
+    # 运行结果：
+    [4.658191, 3.507396] - 1.0
+    [3.457096, -0.082216] - 1.0
+    [6.080573, 0.418886]
+    1.0
 
     return b,alphas
 
