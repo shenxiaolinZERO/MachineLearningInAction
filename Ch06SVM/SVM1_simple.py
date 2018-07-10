@@ -177,8 +177,7 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
     return b,alphas
 
 #
-# 以上的简化版本
-# 简化版本与完整版本两个版本：实现alpha的更改和代数运算的优化环节一模一样。在优化过程中，唯一的不同就是选择alpha的方式。
+# 以上是SMO简化版本
 
 if __name__ == '__main__':
     b,alphas=smoSimple(dataArr,labelArr,0.6,0.001,40)
