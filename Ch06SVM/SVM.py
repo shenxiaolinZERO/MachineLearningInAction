@@ -174,7 +174,8 @@ def smoSimple(dataMatIn,classLabels,C,toler,maxIter):
 
     return b,alphas
 
-#P49
+#
+# 以上的简化版本
 #
 
 if __name__ == '__main__':
