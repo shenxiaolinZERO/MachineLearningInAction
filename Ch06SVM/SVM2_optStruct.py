@@ -22,5 +22,11 @@ class optStruct:
         Ek = fXk - float(oS.labelMat[k])
         return Ek
 
+    def selectJ(i,oS,Ei):
+        maxK = -1
+        maxDeltaE = 0
+        Ej = 0
+        
+
 
 
