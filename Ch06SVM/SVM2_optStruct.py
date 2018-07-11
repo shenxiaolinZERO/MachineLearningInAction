@@ -18,5 +18,8 @@ class optStruct:
         self.eCache = mat(zeros((self.m,2))) # 误差缓存
 
     def calcEk(oS,k):
+        fXk = float(multiply(oS.alphas,oS.labelMat).T*(oS.X*oS.X[k,:].T))+oS.b
+        Ek = fXk - float(oS.labelMat[k])
         
+
 
