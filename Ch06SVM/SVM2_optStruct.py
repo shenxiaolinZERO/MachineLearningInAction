@@ -26,6 +26,7 @@ class optStruct:
         maxK = -1
         maxDeltaE = 0
         Ej = 0
+        oS.eCache[i] = [1,Ei]
         
 
 
