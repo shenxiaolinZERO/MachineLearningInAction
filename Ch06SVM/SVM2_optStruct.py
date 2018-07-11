@@ -8,4 +8,6 @@ __author__ = 'Administrator'
 # 2018...
 class optStruct:
     def __init__(self,dataMatIn,classLabels,C,toler):
+        self.X = dataMatIn
+        self.labelMat = classLabels
         
