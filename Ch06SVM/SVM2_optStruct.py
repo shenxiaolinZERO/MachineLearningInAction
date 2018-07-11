@@ -13,3 +13,6 @@ class optStruct:
         self.C = C
         self.tol = toler
         self.m = shape(dataMatIn)[0]
+        self.alphas = mat(zeros((self.m,1)))
+        self.b = 0
+        self.eCache = mat(zeros((self.m,2)))
