@@ -15,4 +15,8 @@ class optStruct:
         self.m = shape(dataMatIn)[0]
         self.alphas = mat(zeros((self.m,1)))
         self.b = 0
-        self.eCache = mat(zeros((self.m,2)))
+        self.eCache = mat(zeros((self.m,2))) # 误差缓存
+
+    def calcEk(oS,k):
+        
+
