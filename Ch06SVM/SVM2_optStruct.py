@@ -28,7 +28,10 @@ class optStruct:
         Ej = 0
         oS.eCache[i] = [1,Ei]
         validEcacheList = nonzero(oS.eCache[:,0].A)[0]
-        if ()
+        if (len(validEcacheList)) >1:
+            for k in validEcacheList:
+                if k == i:
+                    continue
 
 
 
