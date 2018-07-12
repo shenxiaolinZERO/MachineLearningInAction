@@ -27,7 +27,8 @@ class optStruct:
         maxDeltaE = 0
         Ej = 0
         oS.eCache[i] = [1,Ei]
-        
+        validEcacheList = nonzero(oS.eCache[:,0].A)[0]
+        if ()
 
 
 
