@@ -38,7 +38,7 @@ class optStruct:
                     maxK = k
                     maxDeltaE = deletaE
                     Ej = Ek
-                
+
 
 
 
