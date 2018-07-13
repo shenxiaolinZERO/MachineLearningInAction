@@ -34,6 +34,11 @@ class optStruct:
                     continue
                 Ek = calcEk(oS,k)
                 deletaE = abs(Ei - Ek)
+                if (deletaE > maxDeltaE):
+                    maxK = k
+                    maxDeltaE = deletaE
+                    Ej = Ek
+                
 
 
 
