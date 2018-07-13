@@ -32,6 +32,8 @@ class optStruct:
             for k in validEcacheList:
                 if k == i:
                     continue
+                Ek = calcEk(oS,k)
+                deletaE = abs(Ei - Ek)
 
 
 
