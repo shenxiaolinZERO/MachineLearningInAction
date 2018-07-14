@@ -23,6 +23,7 @@ class optStruct:
         return Ek
 
     def selectJ(i,oS,Ei):
+        # 内循环中的启发式方法
         maxK = -1
         maxDeltaE = 0
         Ej = 0
