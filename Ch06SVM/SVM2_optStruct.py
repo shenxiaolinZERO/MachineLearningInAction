@@ -22,7 +22,7 @@ class optStruct:
         Ek = fXk - float(oS.labelMat[k])
         return Ek
 
-    def selectJ(i,oS,Ei): #选择具有最大步长的 J 
+    def selectJ(i,oS,Ei): #选择具有最大步长的 J
         # 内循环中的启发式方法
         maxK = -1
         maxDeltaE = 0
