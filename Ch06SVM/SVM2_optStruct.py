@@ -6,6 +6,7 @@ from numpy import *
 # 20180711
 # ~
 # 2018...
+
 class optStruct:
     def __init__(self,dataMatIn,classLabels,C,toler):
         self.X = dataMatIn
