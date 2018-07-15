@@ -48,3 +48,4 @@ class Person(object):
 # if __name__ == '__main__':
 #     zhangsan = Person('zhangsan',24)
 #     print(zhangsan)
+
