@@ -44,6 +44,7 @@ class optStruct:
 
     def updateEk(oS,k):
         Ek = calcEk(oS,k)
+        oS.eCache[k] = [1,Ek]
         
 
 
