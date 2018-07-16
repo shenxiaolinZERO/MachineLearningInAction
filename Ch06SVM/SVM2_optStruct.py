@@ -42,6 +42,9 @@ class optStruct:
                     Ej = Ek
             return maxK,Ej
 
+    def updateEk(oS,k):
+        Ek = calcEk(oS,k)
+        
 
 
 
