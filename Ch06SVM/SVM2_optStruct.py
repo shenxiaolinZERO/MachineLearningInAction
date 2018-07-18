@@ -7,6 +7,7 @@ from numpy import *
 # ~
 # 2018...
 
+# 完整版Platt SMO 的支持函数
 class optStruct:
     def __init__(self,dataMatIn,classLabels,C,toler):
         self.X = dataMatIn
