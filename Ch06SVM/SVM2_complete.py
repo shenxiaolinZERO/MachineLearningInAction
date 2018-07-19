@@ -18,9 +18,11 @@ __author__ = 'Administrator'
 # 对整个数据集的扫描相当容易，而实现非边界alpha值的扫描时，首先需要建立这些alpha值的列表，然后再对这个表进行遍历。
 # 同时，该步骤会跳过那些已知的不会改变的alpha值。
 
+import SVM2_optStruct
+
 # 完整Platt SMO算法中的优化例程
 def innerL(i,oS):
-    Ei = calcEk(oS,i)
+    Ei = SVM2_optStruct.calcEk(oS,i)
     if ((oS.labelMat[i] * Ei < -oS.tol) and (oS.alphas[i] < oS.C)) or\
        ((oS.labelMat[i] * Ei >  oS.tol) and (oS.alphas[i] > 0)):
         j, Ej = selectJ(i,oS,Ei)
@@ -42,4 +44,4 @@ def innerL(i,oS):
                 return 0
             oS.alphas[j] -= oS.labelMat[j]*(Ei-Ej)/eta
             oS.alphas[j] = clipAlpha(oS.alphas[j],H,L)
-            
+
