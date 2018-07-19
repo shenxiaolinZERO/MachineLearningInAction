@@ -43,5 +43,5 @@ def innerL(i,oS):
                 print("eta >=0")
                 return 0
             oS.alphas[j] -= oS.labelMat[j]*(Ei-Ej)/eta
-            oS.alphas[j] = clipAlpha(oS.alphas[j],H,L)
+            oS.alphas[j] = SVM_assistFunc.clipAlpha(oS.alphas[j],H,L)
 
