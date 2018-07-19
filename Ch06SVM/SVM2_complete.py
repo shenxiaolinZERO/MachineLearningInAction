@@ -31,3 +31,5 @@ def innerL(i,oS):
             H = min(oS.C,oS.C+oS.alphas[j] - oS.alphas[i])
         else:
             L = max(0,oS.alphas[j] + oS.alphas[i] -C)
+            H = min(oS.C, oS.alphas[j] + oS.alphas[i])
+            
