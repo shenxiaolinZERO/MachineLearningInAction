@@ -37,4 +37,6 @@ def innerL(i,oS):
                 return 0
             eta = 2.0 * oS.X[i,:]*oS.X[j,:].T - oS.X[i,:]*oS.X[i,:].T - \
                 oS.X[j,:]*oS.X[j,:].T
-            
+            if eta >= 0:
+                print("eta >=0")
+                return 0
