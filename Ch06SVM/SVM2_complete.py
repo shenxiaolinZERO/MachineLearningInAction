@@ -21,3 +21,6 @@ __author__ = 'Administrator'
 # 完整Platt SMO算法中的优化例程
 def innerL(i,oS):
     Ei = calcEk(oS,i)
+    if ((oS.labelMat[i] * Ei < -oS.tol) and (oS.alphas[i] < oS.C)) or\
+       ((oS.labelMat[i] * Ei >  oS.tol) and (oS.alphas[i] > 0)):
+        
