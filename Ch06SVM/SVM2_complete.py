@@ -28,3 +28,6 @@ def innerL(i,oS):
         alphaJold = oS.alphas[j].copy()
         if (oS.labelMat[i] != oS.labelMat[j]):
             L = max(0,oS.alphas[j] - oS.alphas[i])
+            H = min()
+        else:
+            L =
