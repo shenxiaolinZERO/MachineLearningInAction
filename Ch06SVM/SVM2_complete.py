@@ -40,3 +40,5 @@ def innerL(i,oS):
             if eta >= 0:
                 print("eta >=0")
                 return 0
+            oS.alphas[j] -= oS.labelMat[j]*(Ei-Ej)/eta
+            
