@@ -19,7 +19,7 @@ __author__ = 'Administrator'
 # 同时，该步骤会跳过那些已知的不会改变的alpha值。
 
 import SVM2_optStruct
-
+import SVM_assistFunc
 # 完整Platt SMO算法中的优化例程
 def innerL(i,oS):
     Ei = SVM2_optStruct.calcEk(oS,i)
