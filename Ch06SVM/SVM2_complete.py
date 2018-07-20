@@ -44,4 +44,5 @@ def innerL(i,oS):
                 return 0
             oS.alphas[j] -= oS.labelMat[j]*(Ei-Ej)/eta
             oS.alphas[j] = SVM_assistFunc.clipAlpha(oS.alphas[j],H,L)
+            updateEk(oS,j)  # 更新误差缓存
 
