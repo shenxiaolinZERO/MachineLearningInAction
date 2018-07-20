@@ -45,8 +45,8 @@
       <file leaf-file-name="SVM2_complete.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+            <state relative-caret-position="460">
+              <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding>
                 <element signature="e#415#436#0" expanded="true" />
               </folding>
@@ -57,7 +57,7 @@
       <file leaf-file-name="SVM2_optStruct.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_optStruct.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
+            <state relative-caret-position="542">
               <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
               <folding />
             </state>
@@ -802,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_optStruct.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM_assistFunc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -818,10 +810,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_optStruct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+        <state relative-caret-position="460">
+          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
           </folding>
