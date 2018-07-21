@@ -45,7 +45,20 @@ class Person(object):
     def __str__(self):
         return '<Person: %s(%s)>' %(self.name,self.age)
 
-# if __name__ == '__main__':
-#     zhangsan = Person('zhangsan',24)
-#     print(zhangsan)
 
+def SumOfLqa():
+    inputIntegers = input("Please input 6 positive integers[<100],the first integer is a： ")
+    list = inputIntegers.split()
+    a = list[0]
+    sum = 0
+    for i in range(length(list)):
+        if list[i+1] < a:
+            sum += list[i+1]
+    print(sum )
+    return sum
+
+
+if __name__ == '__main__':
+    # zhangsan = Person('zhangsan',24)
+    # print(zhangsan)
+    SumOfLqa()

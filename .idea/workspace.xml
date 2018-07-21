@@ -42,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SVM2_complete.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SVM2_complete.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="587">
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="987">
-              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state relative-caret-position="628">
+              <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -122,9 +122,9 @@
         <option value="$PROJECT_DIR$/Ch06SVM/SVM_assistFunc.py" />
         <option value="$PROJECT_DIR$/Ch06SVM/SVM.py" />
         <option value="$PROJECT_DIR$/Ch06SVM/SVM1_simple.py" />
-        <option value="$PROJECT_DIR$/Ch06SVM/test.py" />
         <option value="$PROJECT_DIR$/Ch06SVM/SVM2_optStruct.py" />
         <option value="$PROJECT_DIR$/Ch06SVM/SVM2_complete.py" />
+        <option value="$PROJECT_DIR$/Ch06SVM/test.py" />
       </list>
     </option>
   </component>
@@ -794,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ch06SVM/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM_assistFunc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -825,6 +817,14 @@
           <folding>
             <element signature="e#415#436#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ch06SVM/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
