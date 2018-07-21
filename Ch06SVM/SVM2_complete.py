@@ -45,4 +45,8 @@ def innerL(i,oS):
             oS.alphas[j] -= oS.labelMat[j]*(Ei-Ej)/eta
             oS.alphas[j] = SVM_assistFunc.clipAlpha(oS.alphas[j],H,L)
             SVM2_optStruct.updateEk(oS,j)  # 更新误差缓存
+            if (abs(oS.alphas[j]-alphaJold) < 0.00001) :
+                print("j not moving enough")
+                return 0
+
 
