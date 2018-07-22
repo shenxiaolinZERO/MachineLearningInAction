@@ -49,7 +49,8 @@ def innerL(i,oS):
                 print("j not moving enough")
                 return 0
             oS.alphas[i] += oS.labelMat[j]*oS.labelMat[i] *(alphaJold-oS.alphas[j])
-            SVM2_optStruct.updateEk(oS,i)
-            
+            SVM2_optStruct.updateEk(oS,i)  # 更新误差缓存
+            b1 = oS.b - Ei - oS.labelMat[i]*()
+
 
 
