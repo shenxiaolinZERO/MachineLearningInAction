@@ -48,5 +48,8 @@ def innerL(i,oS):
             if (abs(oS.alphas[j]-alphaJold) < 0.00001) :
                 print("j not moving enough")
                 return 0
+            oS.alphas[i] += oS.labelMat[j]*oS.labelMat[i] *(alphaJold-oS.alphas[j])
+            SVM2_optStruct.updateEk(oS,i)
+            
 
 
