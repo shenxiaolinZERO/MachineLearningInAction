@@ -50,7 +50,7 @@ def innerL(i,oS):
                 return 0
             oS.alphas[i] += oS.labelMat[j]*oS.labelMat[i] *(alphaJold-oS.alphas[j])
             SVM2_optStruct.updateEk(oS,i)  # 更新误差缓存
-            b1 = oS.b - Ei - oS.labelMat[i]*(oS.alphas[i] - alphaIold)*oS.X[i,:]
+            b1 = oS.b - Ei - oS.labelMat[i]*(oS.alphas[i] - alphaIold)*oS.X[i,:]*oS.X[i,:].T - oS.labelMat[j]
 
 
 
