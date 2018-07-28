@@ -34,7 +34,7 @@
       <file leaf-file-name="SVM1_simple.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM1_simple.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3780">
+            <state relative-caret-position="3738">
               <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
               <folding>
                 <element signature="e#2285#2296#0" expanded="true" />
@@ -47,9 +47,12 @@
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+              <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
               <folding>
                 <element signature="e#415#436#0" expanded="true" />
+                <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+                <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+                <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
               </folding>
             </state>
           </provider>
@@ -148,7 +151,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,6 +168,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,7 +339,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16189112" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16404012" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -407,6 +410,9 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
+            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -444,6 +450,9 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
+            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -481,6 +490,9 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
+            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -518,6 +530,9 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
+            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -561,6 +576,9 @@
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
+            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -744,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM1_simple.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3780">
+        <state relative-caret-position="3738">
           <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
           <folding>
             <element signature="e#2285#2296#0" expanded="true" />
@@ -780,9 +798,12 @@
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+          <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
+            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
+            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
