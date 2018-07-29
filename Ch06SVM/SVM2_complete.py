@@ -52,7 +52,9 @@ def innerL(i,oS):
             SVM2_optStruct.updateEk(oS,i)  # 更新误差缓存
             b1 = oS.b - Ei - oS.labelMat[i]*(oS.alphas[i] - alphaIold)*oS.X[i,:]*oS.X[i,:].T \
                  - oS.labelMat[j]*(oS.alphas[j] - alphaJold)*oS.X[i,:]*oS.X[j,:].T
-            b2 = oS.b - Ej - oS.labelMat[i] *(oS.alphas[i] -alphaIold)*oS.X[i,:]*oS.X[j,:].T
+            b2 = oS.b - Ej - oS.labelMat[i] *(oS.alphas[i] -alphaIold)*oS.X[i,:]*oS.X[j,:].T \
+                 - oS.labelMat[j]*(oS.alphas[j] - alphaJold)*oS.X[j,:]*oS.X[j,:].T
+            
 
 
 
