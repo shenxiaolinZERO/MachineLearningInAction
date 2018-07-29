@@ -46,13 +46,10 @@
       <file leaf-file-name="SVM2_complete.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+            <state relative-caret-position="482">
+              <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
               <folding>
                 <element signature="e#415#436#0" expanded="true" />
-                <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-                <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-                <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
               </folding>
             </state>
           </provider>
@@ -151,6 +148,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,8 +166,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,17 +332,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34139785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34139785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16404012" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1661891" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -410,9 +407,6 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
-            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -450,9 +444,6 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
-            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -490,9 +481,6 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
-            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -530,9 +518,6 @@
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
-            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -576,9 +561,6 @@
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
-            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
@@ -797,13 +779,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ch06SVM/SVM2_complete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="54" column="42" lean-forward="false" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        <state relative-caret-position="482">
+          <caret line="54" column="46" lean-forward="false" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
           <folding>
             <element signature="e#415#436#0" expanded="true" />
-            <marker date="1532778541188" expanded="true" signature="498:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="671:2009" ph="..." />
-            <marker date="1532778541188" expanded="true" signature="970:2009" ph="..." />
           </folding>
         </state>
       </provider>
